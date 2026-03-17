@@ -11,6 +11,7 @@ public class YOLODetector : MonoBehaviour
     {
         var model = ModelLoader.Load(modelAsset);
         worker = new Worker(model, BackendType.GPUCompute);
+        Run(testTexture);
     }
 
     public void Run(Texture2D image)
@@ -25,7 +26,7 @@ public class YOLODetector : MonoBehaviour
     }
     void Update()
     {
-        Run(testTexture);
+        
     }
     void OnDestroy()
     {
