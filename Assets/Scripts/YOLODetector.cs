@@ -1,35 +1,67 @@
 using UnityEngine;
 using Unity.InferenceEngine;
+using Unity.InferenceEngine.Layers;
 
 public class YOLODetector : MonoBehaviour
 {
     public ModelAsset modelAsset;
+    private Model runtimeModel;
     private Worker worker;
+   
     public Texture2D testTexture;
+
+    private Tensor<float> inputTensor;
+
+    [SerializeField] private float[] results;
+    
 
     void Start()
     {
-        var model = ModelLoader.Load(modelAsset);
-        worker = new Worker(model, BackendType.GPUCompute);
-        Run(testTexture);
+        runtimeModel = ModelLoader.Load(modelAsset);
+        worker = new Worker(runtimeModel, BackendType.GPUCompute);
+
+        ExecuteModel();
     }
 
-    public void Run(Texture2D image)
+    private void ExecuteModel()
     {
-        Tensor input = TextureConverter.ToTensor(image, 640, 640, 3);
+        inputTensor?.Dispose();
+    inputTensor = TextureConverter.ToTensor(testTexture, 640, 640, 3);
 
-        worker.Schedule(input);
+    // Schedule the inference
+    worker.Schedule(inputTensor);
 
-        Tensor output = worker.PeekOutput();
-
-        Debug.Log(output.shape);
+    // Get output
+    var outputTensor = worker.PeekOutput() as Tensor<float>;
+    if (outputTensor == null)
+    {
+        Debug.LogError("Output tensor is null!");
+        return;
     }
-    void Update()
+
+    // Clone to CPU so we can read values
+    using var cpuTensor = outputTensor.ReadbackAndClone();
+
+    // Example: read first 10 values
+    for (int i = 0; i < 10 && i < cpuTensor.shape.length; i++)
     {
-        
+        Debug.Log($"Value {i}: {cpuTensor[i]}");
     }
-    void OnDestroy()
+
+    // Optionally store in results array
+    results = new float[cpuTensor.shape.length];
+    for (int i = 0; i < cpuTensor.shape.length; i++)
     {
-        worker?.Dispose();
+        results[i] = cpuTensor[i];
+    }
+
+    // Dispose GPU tensor if needed
+    outputTensor.Dispose();
+}
+
+    private void OnDisable()
+    {
+        inputTensor?.Dispose();
+        worker.Dispose();
     }
 }
