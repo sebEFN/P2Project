@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class de : MonoBehaviour
 {
-        void Start ()
+
+     public HandDetection handDetection;
+        void Awake()
         {
             WebCamDevice[] devices = WebCamTexture.devices;
 
@@ -18,5 +20,7 @@ public class de : MonoBehaviour
             WebCamTexture tex = new WebCamTexture(devices[0].name);
             rend.material.mainTexture = tex;
             tex.Play();
+
+             handDetection.webcamTexture = tex;
         }
 }
