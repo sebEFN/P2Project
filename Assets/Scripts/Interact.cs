@@ -1,16 +1,32 @@
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Interact : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    public void Press(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("meow");
+            ApplyRedToChildren();
+        }
+    }
+    void ApplyRedToChildren(){
+        Transform tagRenderers = transform.Find("outline");
+        SpriteRenderer spriteRenderer = tagRenderers.GetComponent<SpriteRenderer>();
+        spriteRenderer.color = new Color (255,0,0,255);
+    }
+    void ApplyBlackToChildren()
+    {
+        Transform tagRenderers = transform.Find("outline");
+        SpriteRenderer spriteRenderer = tagRenderers.GetComponent<SpriteRenderer>();
+        spriteRenderer.color = Color.black;
+    }
     void Update()
     {
         
     }
+
 }
