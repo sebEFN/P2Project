@@ -2,30 +2,20 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Interact : MonoBehaviour
+public class Interact : MonoBehaviour, IClickable
 {
-
-    public void Press(InputAction.CallbackContext context)
+    public void OnClick() 
     {
-        if (context.performed)
-        {
-            
-            Debug.Log("meow");
-            ApplyRedToChildren();
-            
-        }
+        Debug.Log("somebody clicked me");
+        ApplyRedToChildren();
     }
-    void ApplyRedToChildren(){
+     void ApplyRedToChildren(){
         Transform tagRenderers = transform.Find("outline");
         SpriteRenderer spriteRenderer = tagRenderers.GetComponent<SpriteRenderer>();
         spriteRenderer.color = new Color (255,0,0,255);
     }
-    void ApplyBlackToChildren()
-    {
-        Transform tagRenderers = transform.Find("outline");
-        SpriteRenderer spriteRenderer = tagRenderers.GetComponent<SpriteRenderer>();
-        spriteRenderer.color = Color.black;
-    }
-  
-
 }
+    
+      
+
+
