@@ -9,8 +9,10 @@ public class Interact : MonoBehaviour
     {
         if (context.performed)
         {
+            
             Debug.Log("meow");
             ApplyRedToChildren();
+            
         }
     }
     void ApplyRedToChildren(){
@@ -24,9 +26,6 @@ public class Interact : MonoBehaviour
         SpriteRenderer spriteRenderer = tagRenderers.GetComponent<SpriteRenderer>();
         spriteRenderer.color = Color.black;
     }
-    void Update()
-    {
-        
-    }
+  
 
 }
