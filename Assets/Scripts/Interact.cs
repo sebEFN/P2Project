@@ -2,17 +2,25 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Interact : MonoBehaviour, IClickable
+public class Interact : MonoBehaviour
 {
-    public void OnClick() 
+    public GameObject framenow;
+    public GameObject nextFrame;
+    
+    void Start()
     {
-        Debug.Log("somebody clicked me");
-        ApplyRedToChildren();
     }
-     void ApplyRedToChildren(){
-        Transform tagRenderers = transform.Find("outline");
-        SpriteRenderer spriteRenderer = tagRenderers.GetComponent<SpriteRenderer>();
-        spriteRenderer.color = new Color (255,0,0,255);
+    void Update()
+    {
+        if (GetComponent<OnClick>().isclick == true)
+        {
+            Debug.Log("meow");
+            framenow.SetActive(false);
+            nextFrame.SetActive(true);
+
+            GetComponent<OnClick>().isclick = false;
+
+        }
     }
 }
     
