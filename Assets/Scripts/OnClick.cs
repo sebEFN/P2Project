@@ -1,11 +1,27 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class OnClick : MonoBehaviour, IPointerClickHandler
 {
-    public void OnPointerClick (PointerEventData eventData)
+    public string scne;
+    public bool isclick = false;
+    public void SwitchScne()
     {
-        Debug.Log ("clicked");
+        SceneManager.LoadScene(scne);
     }
+    public virtual void OnPointerClick (PointerEventData eventData)
+    {
+        isclick = true;
+        Debug.Log ("clicked");
+        if (scne != "")
+        {
+            SwitchScne();
+        }
+
+    }
+
+    
+    
 }
 
