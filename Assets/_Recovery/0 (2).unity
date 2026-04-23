@@ -850,14 +850,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 795705314}
         m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
-        m_MethodName: Switch
-        m_Mode: 5
+        m_MethodName: grotto
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 3grotto
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &795705312
@@ -910,7 +910,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb98daf94c74db4cbd7d007dcb01eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwitchScene
-  MyScene: 
 --- !u!1 &806326169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,7 +1059,6 @@ GameObject:
   - component: {fileID: 854540094}
   - component: {fileID: 854540093}
   - component: {fileID: 854540092}
-  - component: {fileID: 854540095}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1131,19 +1129,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 854540093}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 854540095}
-        m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
-        m_MethodName: Switch
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 3grotto
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &854540093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1182,19 +1168,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854540090}
   m_CullTransparentMesh: 1
---- !u!114 &854540095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 854540090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bb98daf94c74db4cbd7d007dcb01eb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SwitchScene
-  MyScene: 
 --- !u!1 &1244762562
 GameObject:
   m_ObjectHideFlags: 0
