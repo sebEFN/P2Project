@@ -1055,7 +1055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc21f632b1c310803a5fa0d02b0b6879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OnClick
-  scne: 
+  scne: 2 Tutorial
   isclick: 0
 --- !u!61 &1373809457
 BoxCollider2D:
@@ -1150,7 +1150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1674011397
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1604,7 +1604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2087045239
 RectTransform:
   m_ObjectHideFlags: 0
