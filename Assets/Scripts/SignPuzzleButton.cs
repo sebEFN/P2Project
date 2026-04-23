@@ -1,16 +1,19 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 
 public class SignPuzzleButton : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public Button SignButton;
     void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        {
+            Button button = SignButton.GetComponent<Button>();
+            button.onClick.AddListener(TaskOnClick);
+        }
+    
+    public void TaskOnClick()
+        {
+        Debug.Log("You have clicked the button");
+        }
+ 
 }
