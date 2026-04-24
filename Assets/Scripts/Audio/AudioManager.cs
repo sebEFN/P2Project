@@ -29,7 +29,7 @@ public class AudioManager : MonoBehaviour
 
     private void InitializeAmbience(EventReference ambienceEventReference)
     {
-        ambienceEventInstance = CreateInstance(ambienceEventReference);
+        //ambienceEventInstance = CreateInstance(ambienceEventReference);
         ambienceEventInstance.start();
     }
 
