@@ -6,7 +6,14 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Ambience")]
     [field: SerializeField] public EventReference Ambience { get; private set; }
 
+    [field: Header("Menu Open")]
+    [field: SerializeField] public EventReference MenuOpen { get; private set; }
+
+    [field: Header("Menu Button Tap")]
+    [field: SerializeField] public EventReference TapMenu { get; private set; }
+
     public static FMODEvents Instance { get; private set; }
+    
     private void Awake()
     {
         if (Instance != null)
@@ -15,4 +22,5 @@ public class FMODEvents : MonoBehaviour
         }
         Instance = this;
     }
+    
 }
