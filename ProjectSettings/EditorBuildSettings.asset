@@ -11,6 +11,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dungeon/2 Tutorial.unity
     guid: 707072919b1976e46b67b552cce099dd
+  - enabled: 1
+    path: Assets/Scenes/Dungeon/3grotto.unity
+    guid: a6bdd8c6dce1a8e4b89e9dc5f01e3d7a
+  - enabled: 1
+    path: Assets/Scenes/Harman.unity
+    guid: c3b6e240cb2825c4787fe863d2a9ba7e
+  - enabled: 1
+    path: Assets/Scenes/Peter.unity
+    guid: 08bbf8cb47b31a74eb7d07e8d3c93ef5
+  - enabled: 1
+    path: Assets/Scenes/Sebastian ;3.unity
+    guid: ad4016bff3a23d89e8413b14438864e1
+  - enabled: 1
+    path: Assets/Scenes/Momoh.unity
+    guid: 275695d5357fc4d4c9ec02115fb65ff9
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
