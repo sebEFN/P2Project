@@ -72,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{f4812ec4-d7ef-4adc-ac4a-f892fda5969e}">
+		<property name="volume">
+			<value>3</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{ba82059b-7250-4d2c-b489-1bd6cd2c326c}</destination>
 		</relationship>
@@ -95,7 +98,11 @@
 	<object class="MixerBusPanner" id="{ec8fa896-38b8-4cf3-926a-3ca6c15ab3fa}" />
 	<object class="MixerBusEffectChain" id="{ba82059b-7250-4d2c-b489-1bd6cd2c326c}">
 		<relationship name="effects">
+			<destination>{4fb24a0f-1b7c-47b0-9c43-ba19118c81d4}</destination>
 			<destination>{ee2ba6f4-63fe-4477-a8f3-3fa7b6359846}</destination>
+			<destination>{ccc6fa5b-fc7a-48d8-8e4b-6599bc5ea3c3}</destination>
+			<destination>{a0022b4d-dc46-4175-adad-09adfb9aeb08}</destination>
+			<destination>{a27bc76f-b241-475a-9c7e-7f189ab4e89f}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{e5b9049c-8464-4d79-9f39-9ff182f81886}" />
@@ -105,5 +112,49 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{3cf2f9df-68a1-4804-84cf-5675c2911990}" />
+	<object class="ThreeEQEffect" id="{4fb24a0f-1b7c-47b0-9c43-ba19118c81d4}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
+		<property name="lowGain">
+			<value>-6.5</value>
+		</property>
+		<property name="lowCrossover">
+			<value>200</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{ee2ba6f4-63fe-4477-a8f3-3fa7b6359846}" />
+	<object class="DelayEffect" id="{ccc6fa5b-fc7a-48d8-8e4b-6599bc5ea3c3}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
+		<property name="delay">
+			<value>260</value>
+		</property>
+		<property name="feedback">
+			<value>15.5</value>
+		</property>
+		<property name="level">
+			<value>-17.5</value>
+		</property>
+	</object>
+	<object class="SFXReverbEffect" id="{a0022b4d-dc46-4175-adad-09adfb9aeb08}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
+		<property name="decayTime">
+			<value>1300</value>
+		</property>
+	</object>
+	<object class="ChorusEffect" id="{a27bc76f-b241-475a-9c7e-7f189ab4e89f}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
+		<property name="rate">
+			<value>2.79999995</value>
+		</property>
+		<property name="depth">
+			<value>71</value>
+		</property>
+	</object>
 </objects>

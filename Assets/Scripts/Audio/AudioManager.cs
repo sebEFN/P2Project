@@ -6,9 +6,6 @@ using System.Collections.Generic;
 public class AudioManager : MonoBehaviour
 {
     private List<EventInstance> eventInstances;
-
-    private List<EventInstance> eventEmitters;
-
     private EventInstance ambienceEventInstance;
 
     public static AudioManager Instance { get; private set; }
@@ -21,6 +18,8 @@ public class AudioManager : MonoBehaviour
         }
        Instance = this;
 
+        eventInstances = new List<EventInstance>();
+
     }
     private void Start()
     {
@@ -29,12 +28,40 @@ public class AudioManager : MonoBehaviour
 
     private void InitializeAmbience(EventReference ambienceEventReference)
     {
-        //ambienceEventInstance = CreateInstance(ambienceEventReference);
+        ambienceEventInstance = CreateEventInstance(ambienceEventReference);
         ambienceEventInstance.start();
     }
 
     public void PlayOneShot(EventReference sound)
     { 
     RuntimeManager.PlayOneShot(sound);
+    }
+
+    public EventInstance CreateEventInstance (EventReference eventReference)
+    {
+        EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
+        eventInstances.Add(eventInstance);
+        return eventInstance;
+    }
+
+    private void CleanUp()
+    {
+        // stop and release any created instances
+        foreach (EventInstance eventInstance in eventInstances)
+        {
+            eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            eventInstance.release();
+        }
+        // stop and release ambience instance if present
+        if (ambienceEventInstance.isValid())
+        {
+            ambienceEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            ambienceEventInstance.release();
+        }
+    }
+
+        private void OnDestroy()
+        {
+            CleanUp();
     }
 }
