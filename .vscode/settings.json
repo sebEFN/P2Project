@@ -67,5 +67,8 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "P2Project.slnx"
+    "dotnet.defaultSolution": "P2Project.slnx",
+    "dotrush.roslyn.projectOrSolutionFiles": [
+        "/home/basics/UnityProjects/P2Project/P2Project.sln"
+    ]
 }
