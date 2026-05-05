@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d4dea0182cc9d749f878050ce0cac3, type: 3}
   m_Name: sleep
   m_EditorClassIdentifier: Assembly-CSharp::Signs
-  signName: 
+  signName: sleep
   correct: 0
   signImage: {fileID: 0}
+  signButton: {fileID: 0}
