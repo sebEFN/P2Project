@@ -9,6 +9,7 @@ public class Combat : MonoBehaviour
         foreach (var item in mySigns.signs)
         {
             Debug.Log("meow");
+            GameObject currentSign = Instantiate(mySigns.signs);
         }
     }
 
