@@ -270,6 +270,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - GenCave
   - OutsideArea
   - SFX
   BanksToLoad: []
