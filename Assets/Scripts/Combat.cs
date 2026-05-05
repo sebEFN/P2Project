@@ -1,21 +1,37 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class Combat : MonoBehaviour
 {
-    [SerializeField] Compendium mySigns;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+      public GameObject spawnSign;
+
+    // An instance of the ScriptableObject defined above.
+   [SerializeField] Compendium compendium;
+
+    // This will be appended to the name of the created entities and increment when each is created.
+    int instanceNumber = 1;
+
     void Start()
     {
-        foreach (var item in mySigns.signs)
-        {
-            Debug.Log("meow");
-            GameObject currentSign = Instantiate(mySigns.signs);
-        }
+        SpawnEntities();
     }
 
-    // Update is called once per frame
-    void Update()
+    void SpawnEntities()
     {
-       
+
+        foreach(var item in compendium.signs)
+        {
+            // Creates an instance of the prefab at the current spawn point.
+            GameObject currenSign = Instantiate(spawnSign, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+            currenSign.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
+
+            // Sets the name of the instantiated entity to be the string defined in the ScriptableObject and then appends it with a unique number. 
+            currenSign.name = item.signName + instanceNumber;
+            Image img = currenSign.GetComponent<Image>();
+            img.sprite = item.signImage;
+
+            instanceNumber++;
+        }
     }
 }
