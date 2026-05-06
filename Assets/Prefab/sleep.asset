@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Signs
   signName: sleep
   correct: 0
-  signImage: {fileID: 0}
-  signButton: {fileID: 0}
+  signImage: {fileID: -7518617377195894660, guid: ac384d3489aa4ce468c0bbb04248b69e, type: 3}
