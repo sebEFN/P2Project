@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class Combat : MonoBehaviour
 {
       public GameObject spawnSign;
+      public int health;
 
     // An instance of the ScriptableObject defined above.
    [SerializeField] Compendium compendium;
