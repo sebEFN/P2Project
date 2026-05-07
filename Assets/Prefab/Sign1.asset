@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Sign1
   m_EditorClassIdentifier: Assembly-CSharp::Signs
   signName: Correct
-  correct: 0
+  sleep: 0
   signImage: {fileID: 0}
+  damage: 1

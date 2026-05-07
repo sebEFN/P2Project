@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 
 public class Combat : MonoBehaviour
 {
       public GameObject spawnSign;
       public int health;
+      public bool isSleeping = false;
 
     // An instance of the ScriptableObject defined above.
    [SerializeField] Compendium compendium;
@@ -32,7 +34,7 @@ public class Combat : MonoBehaviour
             Image img = currenSign.GetComponent<Image>();
             img.sprite = item.signImage;
             Button signButton = currenSign.GetComponent<Button>();
-
+            signButton.onClick.AddListener(() => ButtonEffects(item));
 
             instanceNumber++;
         }
@@ -40,5 +42,11 @@ public class Combat : MonoBehaviour
     void UpdateHealth()
     {
         health -= 1 ;
+    }
+
+    void ButtonEffects(Signs item)
+    {
+        health -= item.damage;
+        isSleeping = item.sleep;
     }
 }
