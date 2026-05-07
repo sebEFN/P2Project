@@ -31,6 +31,8 @@ public class Combat : MonoBehaviour
             currenSign.name = item.signName + instanceNumber;
             Image img = currenSign.GetComponent<Image>();
             img.sprite = item.signImage;
+            Button signButton = currenSign.GetComponent<Button>();
+
 
             instanceNumber++;
         }

@@ -7,6 +7,7 @@ public class Signs : ScriptableObject
     public string signName;
     public bool correct;
     public Sprite signImage;
+    public Button signeffect;
 
     
 }
