@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Signs
   signName: Wrong
   correct: 0
-  signImage: {fileID: 0}
+  signImage: {fileID: 3847524548677949275, guid: c2ab5f0c73977c24cade905fcbf308d9, type: 3}
