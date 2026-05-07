@@ -1025,6 +1025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Combat
   spawnSign: {fileID: 7389967475319026305, guid: ad9ebbcac10bfd3ef963269b57e42277, type: 3}
+  health: 3
   compendium: {fileID: 1986544902}
 --- !u!1 &576712887
 GameObject:

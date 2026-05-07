@@ -35,4 +35,8 @@ public class Combat : MonoBehaviour
             instanceNumber++;
         }
     }
+    void UpdateHealth()
+    {
+        health -= 1 ;
+    }
 }
