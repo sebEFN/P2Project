@@ -8,7 +8,7 @@ public class Signs : ScriptableObject
     public bool sleep;
     public Sprite signImage;
     public int damage;
-    
+    public int healing;
 
     
 }

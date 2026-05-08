@@ -48,5 +48,6 @@ public class Combat : MonoBehaviour
     {
         health -= item.damage;
         isSleeping = item.sleep;
+        health += item.healing;
     }
 }
