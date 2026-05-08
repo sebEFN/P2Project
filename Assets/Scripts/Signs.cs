@@ -9,6 +9,7 @@ public class Signs : ScriptableObject
     public Sprite signImage;
     public int damage;
     public int healing;
+    public int block;
 
     
 }

@@ -8,6 +8,7 @@ public class Combat : MonoBehaviour
       public GameObject spawnSign;
       public int health;
       public bool isSleeping = false;
+      public int shield;
 
     // An instance of the ScriptableObject defined above.
    [SerializeField] Compendium compendium;
@@ -49,5 +50,7 @@ public class Combat : MonoBehaviour
         health -= item.damage;
         isSleeping = item.sleep;
         health += item.healing;
+        shield += item.block;
+
     }
 }
