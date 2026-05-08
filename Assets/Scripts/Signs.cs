@@ -5,8 +5,10 @@ using UnityEngine.UI;
 public class Signs : ScriptableObject
 {
     public string signName;
-    public bool correct;
+    public bool sleep;
     public Sprite signImage;
+    public int damage;
+    public int healing;
 
     
 }
