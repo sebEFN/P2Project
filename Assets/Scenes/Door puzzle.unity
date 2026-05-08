@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 44620329}
   - component: {fileID: 44620328}
   - component: {fileID: 44620327}
+  - component: {fileID: 44620330}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -363,6 +364,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44620325}
   m_CullTransparentMesh: 1
+--- !u!114 &44620330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44620325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53649fa6158fab45af1d24b9dcb67fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SequenceButton
+  objectID: naruto
 --- !u!1 &75053276
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +389,7 @@ GameObject:
   - component: {fileID: 75053279}
   - component: {fileID: 75053278}
   m_Layer: 5
-  m_Name: Sigil (3)
+  m_Name: Sigil 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -407,7 +421,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75053276}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
@@ -447,7 +461,7 @@ GameObject:
   - component: {fileID: 81883386}
   - component: {fileID: 81883385}
   m_Layer: 5
-  m_Name: Sigil (5)
+  m_Name: Sigil 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -479,7 +493,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81883383}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
@@ -727,7 +741,7 @@ GameObject:
   - component: {fileID: 171815594}
   - component: {fileID: 171815593}
   m_Layer: 5
-  m_Name: Sigil (4)
+  m_Name: Sigil 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -759,7 +773,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171815591}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
@@ -936,6 +950,7 @@ GameObject:
   - component: {fileID: 660488401}
   - component: {fileID: 660488400}
   - component: {fileID: 660488399}
+  - component: {fileID: 660488402}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -1045,6 +1060,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660488397}
   m_CullTransparentMesh: 1
+--- !u!114 &660488402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660488397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53649fa6158fab45af1d24b9dcb67fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SequenceButton
+  objectID: hokage
 --- !u!1 &793367738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,6 +1160,7 @@ GameObject:
   - component: {fileID: 854488867}
   - component: {fileID: 854488866}
   - component: {fileID: 854488865}
+  - component: {fileID: 854488868}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1241,6 +1270,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854488863}
   m_CullTransparentMesh: 1
+--- !u!114 &854488868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854488863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53649fa6158fab45af1d24b9dcb67fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SequenceButton
+  objectID: unlimitedvoid
 --- !u!1 &993726009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,7 +1442,7 @@ GameObject:
   - component: {fileID: 1052180895}
   - component: {fileID: 1052180894}
   m_Layer: 5
-  m_Name: Sigil
+  m_Name: Sigil 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1413,7 +1455,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052180893}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
@@ -1609,6 +1651,7 @@ GameObject:
   - component: {fileID: 1102262002}
   - component: {fileID: 1102262001}
   - component: {fileID: 1102262000}
+  - component: {fileID: 1102262003}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1718,6 +1761,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102261998}
   m_CullTransparentMesh: 1
+--- !u!114 &1102262003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102261998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e53649fa6158fab45af1d24b9dcb67fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SequenceButton
+  objectID: malevolantshrine
 --- !u!1 &1147773567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1824,6 +1880,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147773567}
   m_CullTransparentMesh: 1
+--- !u!1 &1357872071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1357872074}
+  - component: {fileID: 1357872073}
+  - component: {fileID: 1357872072}
+  m_Layer: 0
+  m_Name: SequenceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1357872072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357872071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2864f41f88102e84ab4a39e094b43990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SequenceManager
+  correctSequence:
+  - naruto
+  - unlimitedvoid
+  - malevolantshrine
+  - hokage
+--- !u!114 &1357872073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357872071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9745f1a19fa892e44811d2e3d58a12e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Sequence
+--- !u!4 &1357872074
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357872071}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.06835, y: -0.7784, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1468008892
 GameObject:
   m_ObjectHideFlags: 0
@@ -2406,7 +2524,7 @@ GameObject:
   - component: {fileID: 1715420388}
   - component: {fileID: 1715420387}
   m_Layer: 5
-  m_Name: Sigil (1)
+  m_Name: Sigil 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2438,7 +2556,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715420385}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
@@ -2582,7 +2700,7 @@ GameObject:
   - component: {fileID: 1775673319}
   - component: {fileID: 1775673318}
   m_Layer: 5
-  m_Name: Sigil (2)
+  m_Name: Sigil 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2614,7 +2732,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775673316}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
@@ -3369,3 +3487,4 @@ SceneRoots:
   - {fileID: 1468008896}
   - {fileID: 1704624467}
   - {fileID: 1544016761}
+  - {fileID: 1357872074}
