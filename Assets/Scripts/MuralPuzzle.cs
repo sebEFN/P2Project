@@ -1,31 +1,53 @@
 using UnityEngine;
 
-public class SequenceManager : MonoBehaviour
+public class MuralPuzzle : MonoBehaviour
 {
+    [Header("Correct Button Order")]
     public string[] correctSequence;
 
-    private int currentIndex = 0;
+    public GameObject currentcanvas;
+    public GameObject nextcanvas;
 
-    public void RegisterClick(string objectID)
+    private int currentIndex = 0;
+    
+    public void ButtonPressed(string buttonID)
     {
-        // Check if clicked object matches expected sequence item
-        if (objectID == correctSequence[currentIndex])
+        // Correct button clicked
+        if (buttonID == correctSequence[currentIndex])
         {
-            Debug.Log("Correct!");
+            Debug.Log("Correct: " + buttonID);
 
             currentIndex++;
 
-            // Sequence complete
+            // Finished sequence
             if (currentIndex >= correctSequence.Length)
             {
-                Debug.Log("Sequence Completed!");
-                currentIndex = 0;
+                SequenceComplete();
             }
         }
         else
         {
-            Debug.Log("Wrong! Resetting sequence.");
-            currentIndex = 0;
+            Debug.Log("Wrong button. Resetting.");
+            ResetSequence();
         }
+    }
+
+    private void SequenceComplete()
+    {
+        currentcanvas.SetActive(false);
+        nextcanvas.SetActive(true);
+        Debug.Log("SEQUENCE COMPLETE!");
+
+        // Example:
+        // OpenDoor();
+        // Play animation
+        // Enable next puzzle
+
+        ResetSequence();
+    }
+
+    private void ResetSequence()
+    {
+        currentIndex = 0;
     }
 }
