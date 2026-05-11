@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d4dea0182cc9d749f878050ce0cac3, type: 3}
   m_Name: Sign2
   m_EditorClassIdentifier: Assembly-CSharp::Signs
-  signName: Wrong
-  correct: 0
-  signImage: {fileID: 0}
+  signName: medicine
+  sleep: 0
+  signImage: {fileID: 3847524548677949275, guid: c2ab5f0c73977c24cade905fcbf308d9, type: 3}
+  damage: 0
+  healing: 2
