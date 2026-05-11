@@ -8,14 +8,25 @@ public class MuralPuzzle : MonoBehaviour
     public GameObject currentcanvas;
     public GameObject nextcanvas;
 
+    public GameObject[] progressSprites;
+
     private int currentIndex = 0;
-    
+
+    private void Start()
+    {
+        ResetSprites();
+    }
     public void ButtonPressed(string buttonID)
     {
         // Correct button clicked
         if (buttonID == correctSequence[currentIndex])
         {
             Debug.Log("Correct: " + buttonID);
+
+            if (currentIndex < progressSprites.Length)
+            {
+                progressSprites[currentIndex].SetActive(true);
+            }
 
             currentIndex++;
 
@@ -49,5 +60,13 @@ public class MuralPuzzle : MonoBehaviour
     private void ResetSequence()
     {
         currentIndex = 0;
+        ResetSprites();
+    }
+    private void ResetSprites()
+    {
+        foreach (GameObject sprite in progressSprites)
+        {
+            sprite.SetActive(false);
+        }
     }
 }
