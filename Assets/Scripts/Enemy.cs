@@ -4,7 +4,7 @@ public abstract class Enemy : MonoBehaviour
 {
     public int enemyHealth;
     public int enemyDamage; 
-    public bool isSnoozing = false;
+    public bool isSleeping = false;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
    public abstract void Attack(Player Playerhealth);
@@ -20,9 +20,13 @@ public abstract class Enemy : MonoBehaviour
         return enemyHealth <= 0;
     }
 
-    public virtual void TakeDamage (int amount)
+    public virtual void EnemyTakeDamage ()
     {
-        enemyHealth -= amount;
         if (enemyHealth <= 0 ) Die();
+    }
+
+    void Update()
+    {
+        EnemyTakeDamage();
     }
 }

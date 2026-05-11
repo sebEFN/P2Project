@@ -7,8 +7,6 @@ using System.Collections;
 public class Combat : MonoBehaviour
 {
     public GameObject spawnSign;
-    public bool isSleeping = false;
-    public int shield;
     public Player player;
     public Enemy currentEnemy;
     public enum TurnState { PlayerTurn, EnemyTurn }
@@ -49,27 +47,26 @@ public class Combat : MonoBehaviour
 
     void ButtonEffects(Signs item)
     {
-        currentEnemy.enemyHealth -= item.damage;
-        isSleeping = item.sleep;
-        player.Playerhealth += item.healing;
-        shield += item.block;
-
-    }
-
-    public void PlayCard(int cardDamage)
-    {
         if (currentTurn != TurnState.PlayerTurn) return;
 
-        currentEnemy.TakeDamage(cardDamage);
+        if (currentTurn == TurnState.PlayerTurn)
+        {
+        currentEnemy.enemyHealth -= item.damage;
+        currentEnemy.isSleeping = item.sleep;
+        player.Playerhealth += item.healing;
+        player.Playershield += item.block;
+        }
 
         if (currentEnemy.IsDead()) return; //enemy died, stop here
 
         EndPlayerTurn();
+
     }
 
     private void EndPlayerTurn()
     {
         currentTurn = TurnState.EnemyTurn;
+        Debug.Log("is EnemyTurn");
         StartCoroutine(EnemyTurn());
     }
 
@@ -77,9 +74,18 @@ public class Combat : MonoBehaviour
     {
         yield return new WaitForSeconds(1f); // small delay feels natural
         
-        currentEnemy.Attack(player);
+        if (currentEnemy.isSleeping == true)
+        {
+            currentTurn = TurnState.PlayerTurn;   
+        }
+
+        else
+            {
+                currentEnemy.Attack(player);
+            }
         
         if (player.IsDead()) yield break;
+        Debug.Log("is PlayerTurn");
 
         currentTurn = TurnState.PlayerTurn;
     }

@@ -5,13 +5,13 @@ public class Goblin : Enemy
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        enemyHealth = 30;
-        enemyDamage = 5;
+        enemyHealth = 15;
+        enemyDamage = 3;
     }
 
     public override void Attack(Player Playerhealth)
     {
-        Playerhealth.TakeDamage(enemyDamage);
+        Playerhealth.PlayerTakeDamage(enemyDamage);
     }
 
     public override void Snooze()

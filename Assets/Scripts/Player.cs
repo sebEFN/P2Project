@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Player : Combat
+public class Player : MonoBehaviour
 {
     public int Playerhealth; 
+    public int Playershield;
 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,9 +23,14 @@ public class Player : Combat
         return Playerhealth <= 0;
     }
 
-    public void TakeDamage (int amount)
+    public void PlayerTakeDamage (int amount)
     {
         Playerhealth -= amount;
         if (Playerhealth <= 0 ) PlayerDie();
     }
+
+    /*void Update()
+    {
+        PlayerTakeDamage();
+    }*/
 }
