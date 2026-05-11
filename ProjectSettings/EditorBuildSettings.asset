@@ -35,10 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dungeon/8 room.unity
     guid: d5fdcd5fac058a542bfc21f165813d45
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Dungeon/10 Book room.unity
     guid: cb92878c647dbb44d83a22e91f3242dc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Dungeon/11 Balcony.unity
     guid: 5bfe7d5847e22ec45aafbf229563d704
   m_configObjects:
