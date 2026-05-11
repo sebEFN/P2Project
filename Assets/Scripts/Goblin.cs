@@ -1,6 +1,6 @@
 using UnityEngine;
 
-class Goblin : Enemy
+public class Goblin : Enemy
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -9,12 +9,12 @@ class Goblin : Enemy
         enemyDamage = 5;
     }
 
-    public override void attack()
+    public override void Attack(Player Playerhealth)
     {
-        //PlayerHealth.instance.TakeDamage (enemyDamage);
+        Playerhealth.TakeDamage(enemyDamage);
     }
 
-    public override void snooze()
+    public override void Snooze()
     {
         
     }
