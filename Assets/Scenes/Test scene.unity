@@ -211,6 +211,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Compendium
   signs: []
+  spawnSign: {fileID: 0}
+  listContainer: {fileID: 0}
 --- !u!1 &137677361
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,12 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e970e3bc508c9424b8f97552784650c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  spawnSign: {fileID: 0}
-  health: 0
-  isSleeping: 0
-  shield: 0
-  compendium: {fileID: 40244975}
-  Playerhealth: 0
+  Playerhealth: 50
 --- !u!1 &1751005626
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,11 +394,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8284013ff28f4f9b931b24302a3788d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Combat
-  spawnSign: {fileID: 0}
-  health: 0
+  spawnSign: {fileID: 7389967475319026305, guid: ad9ebbcac10bfd3ef963269b57e42277, type: 3}
   isSleeping: 0
   shield: 0
-  compendium: {fileID: 0}
+  player: {fileID: 855255836}
+  currentEnemy: {fileID: 29075464}
+  currentTurn: 0
+  compendium: {fileID: 40244975}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -7,8 +7,6 @@ using System.Collections;
 public class Combat : MonoBehaviour
 {
     public GameObject spawnSign;
-    public bool isSleeping = false;
-    public int shield;
     public Player player;
     public Enemy currentEnemy;
     public enum TurnState { PlayerTurn, EnemyTurn }
@@ -50,9 +48,9 @@ public class Combat : MonoBehaviour
     void ButtonEffects(Signs item)
     {
         currentEnemy.enemyHealth -= item.damage;
-        isSleeping = item.sleep;
+        currentEnemy.isSleeping = item.sleep;
         player.Playerhealth += item.healing;
-        shield += item.block;
+        player.Playershield += item.block;
 
     }
 
