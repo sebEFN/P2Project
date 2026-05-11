@@ -18,7 +18,8 @@ public class Chest : MonoBehaviour
         {
             GetComponent<OnClick>().isclick = false;
             compendium.signs.Add(giveSign);
-            Debug.Log("Collected " + giveSign);
+            compendium.RefreshUI();
+            Debug.Log("Collected " + giveSign.signName);
         }
     }
 }
