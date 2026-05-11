@@ -63,17 +63,6 @@ public class Combat : MonoBehaviour
 
     }
 
-    /*public void PlayCard()
-    {
-        if (currentTurn != TurnState.PlayerTurn) return;
-
-        currentEnemy.EnemyTakeDamage(cardDamage);
-
-        if (currentEnemy.IsDead()) return; //enemy died, stop here
-
-        EndPlayerTurn();
-    }*/
-
     private void EndPlayerTurn()
     {
         currentTurn = TurnState.EnemyTurn;
@@ -85,7 +74,15 @@ public class Combat : MonoBehaviour
     {
         yield return new WaitForSeconds(1f); // small delay feels natural
         
-        currentEnemy.Attack(player);
+        if (currentEnemy.isSleeping == true)
+        {
+            currentTurn = TurnState.PlayerTurn;   
+        }
+
+        else
+            {
+                currentEnemy.Attack(player);
+            }
         
         if (player.IsDead()) yield break;
         Debug.Log("is PlayerTurn");

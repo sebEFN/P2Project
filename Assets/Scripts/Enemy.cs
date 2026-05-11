@@ -20,9 +20,13 @@ public abstract class Enemy : MonoBehaviour
         return enemyHealth <= 0;
     }
 
-    public virtual void EnemyTakeDamage (int amount)
+    public virtual void EnemyTakeDamage ()
     {
-        enemyHealth -= amount;
         if (enemyHealth <= 0 ) Die();
+    }
+
+    void Update()
+    {
+        EnemyTakeDamage();
     }
 }
