@@ -11,7 +11,7 @@ public class Goblin : Enemy
 
     public override void Attack(Player Playerhealth)
     {
-        Playerhealth.TakeDamage(enemyDamage);
+        Playerhealth.PlayerTakeDamage(enemyDamage);
     }
 
     public override void Snooze()

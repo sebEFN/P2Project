@@ -47,27 +47,37 @@ public class Combat : MonoBehaviour
 
     void ButtonEffects(Signs item)
     {
+        if (currentTurn != TurnState.PlayerTurn) return;
+
+        if (currentTurn == TurnState.PlayerTurn)
+        {
         currentEnemy.enemyHealth -= item.damage;
         currentEnemy.isSleeping = item.sleep;
         player.Playerhealth += item.healing;
         player.Playershield += item.block;
-
-    }
-
-    public void PlayCard(int cardDamage)
-    {
-        if (currentTurn != TurnState.PlayerTurn) return;
-
-        currentEnemy.TakeDamage(cardDamage);
+        }
 
         if (currentEnemy.IsDead()) return; //enemy died, stop here
 
         EndPlayerTurn();
+
     }
+
+    /*public void PlayCard()
+    {
+        if (currentTurn != TurnState.PlayerTurn) return;
+
+        currentEnemy.EnemyTakeDamage(cardDamage);
+
+        if (currentEnemy.IsDead()) return; //enemy died, stop here
+
+        EndPlayerTurn();
+    }*/
 
     private void EndPlayerTurn()
     {
         currentTurn = TurnState.EnemyTurn;
+        Debug.Log("is EnemyTurn");
         StartCoroutine(EnemyTurn());
     }
 
@@ -78,6 +88,7 @@ public class Combat : MonoBehaviour
         currentEnemy.Attack(player);
         
         if (player.IsDead()) yield break;
+        Debug.Log("is PlayerTurn");
 
         currentTurn = TurnState.PlayerTurn;
     }

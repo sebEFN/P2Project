@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
         return Playerhealth <= 0;
     }
 
-    public void TakeDamage (int amount)
+    public void PlayerTakeDamage (int amount)
     {
         Playerhealth -= amount;
         if (Playerhealth <= 0 ) PlayerDie();
