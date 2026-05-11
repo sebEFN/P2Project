@@ -2,13 +2,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using JetBrains.Annotations;
+using System.Collections;
 
 public class Combat : MonoBehaviour
 {
-      public GameObject spawnSign;
-      public int health;
-      public bool isSleeping = false;
-      public int shield;
+    public GameObject spawnSign;
+    public bool isSleeping = false;
+    public int shield;
+    public Player player;
+    public Enemy currentEnemy;
+    public enum TurnState { PlayerTurn, EnemyTurn }
+    public TurnState currentTurn = TurnState.PlayerTurn;
+
+      
 
     // An instance of the ScriptableObject defined above.
    [SerializeField] Compendium compendium;
@@ -40,17 +46,41 @@ public class Combat : MonoBehaviour
             instanceNumber++;
         }
     }
-    void UpdateHealth()
-    {
-        health -= 1 ;
-    }
 
     void ButtonEffects(Signs item)
     {
-        health -= item.damage;
+        currentEnemy.enemyHealth -= item.damage;
         isSleeping = item.sleep;
-        health += item.healing;
+        player.Playerhealth += item.healing;
         shield += item.block;
 
+    }
+
+    public void PlayCard(int cardDamage)
+    {
+        if (currentTurn != TurnState.PlayerTurn) return;
+
+        currentEnemy.TakeDamage(cardDamage);
+
+        if (currentEnemy.IsDead()) return; //enemy died, stop here
+
+        EndPlayerTurn();
+    }
+
+    private void EndPlayerTurn()
+    {
+        currentTurn = TurnState.EnemyTurn;
+        StartCoroutine(EnemyTurn());
+    }
+
+    private IEnumerator EnemyTurn()
+    {
+        yield return new WaitForSeconds(1f); // small delay feels natural
+        
+        currentEnemy.Attack(player);
+        
+        if (player.IsDead()) yield break;
+
+        currentTurn = TurnState.PlayerTurn;
     }
 }

@@ -9,7 +9,7 @@ public class Player : Combat
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Playerhealth = health;
+        Playerhealth = 50;
     }
 
     private void PlayerDie()
