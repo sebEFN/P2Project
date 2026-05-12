@@ -49,10 +49,6 @@ public class MuralPuzzle : MonoBehaviour
         nextcanvas.SetActive(true);
         Debug.Log("SEQUENCE COMPLETE!");
 
-        // Example:
-        // OpenDoor();
-        // Play animation
-        // Enable next puzzle
 
         ResetSequence();
     }
