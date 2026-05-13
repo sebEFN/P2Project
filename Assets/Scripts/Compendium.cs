@@ -18,15 +18,14 @@ public class Compendium : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        if (instance != null && instance != this)
+    {
+        Destroy(gameObject);
+        return;
+    }
+
+    instance = this;
+    DontDestroyOnLoad(gameObject);
     }
 
 
@@ -41,7 +40,7 @@ public class Compendium : MonoBehaviour
         //spawn one card per sign
         foreach (var item in signs)
         {
-            GameObject currentSign = Instantiate(spawnSign);
+            GameObject currentSign = Instantiate(spawnSign, new Vector2(0, 0), Quaternion.identity);
             currentSign.transform.SetParent(listContainer, false);
             currentSign.name = item.signName;
             currentSign.GetComponent<Image>().sprite = item.signImage;
