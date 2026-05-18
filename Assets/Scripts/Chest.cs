@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour
 {
-    [SerializeField] Signs giveSign;
+    [SerializeField] Signs[] giveSign;
     [SerializeField] Compendium compendium;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,9 +17,13 @@ public class Chest : MonoBehaviour
         if (GetComponent<OnClick>().isclick == true)
         {
             GetComponent<OnClick>().isclick = false;
-            compendium.signs.Add(giveSign);
-            compendium.RefreshUI();
-            Debug.Log("Collected " + giveSign.signName);
+            foreach (var item in giveSign)
+            {
+                compendium.signs.Add(item);
+                compendium.RefreshUI();
+            }
+            
+            //Debug.Log("Collected " + giveSign.signName);
         }
     }
 }

@@ -32,11 +32,13 @@ public class Combat : MonoBehaviour
 
     void Start()
     {
+       compendium = GameObject.FindGameObjectWithTag("CompendiumTag").GetComponent<Compendium>();
         SpawnEntities();
 
         Turn = "Player's";
 
        enemyColor = currentEnemy.GetComponent<SpriteRenderer>();
+
 
 
     }
