@@ -3,14 +3,24 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using System.Collections;
+using TMPro;
 
 public class Combat : MonoBehaviour
 {
     public GameObject spawnSign;
+    [Header("Fighter")]
     public Player player;
     public Enemy currentEnemy;
     public enum TurnState { PlayerTurn, EnemyTurn }
+
+    [Header("Text")]
     public TurnState currentTurn = TurnState.PlayerTurn;
+    public TextMeshProUGUI TurnOrder;
+    private string Turn;
+    public TextMeshProUGUI EnemyHealthText;
+    public TextMeshProUGUI PlayerHealthText;
+    private SpriteRenderer enemyColor;
+
 
       
 
@@ -23,6 +33,18 @@ public class Combat : MonoBehaviour
     void Start()
     {
         SpawnEntities();
+
+        Turn = "Player's";
+
+       enemyColor = currentEnemy.GetComponent<SpriteRenderer>();
+
+
+    }
+
+    void Update()
+    {
+        SetTurnOrder();
+        UpdateEntityHealth();
     }
 
     void SpawnEntities()
@@ -36,13 +58,24 @@ public class Combat : MonoBehaviour
 
             // Sets the name of the instantiated entity to be the string defined in the ScriptableObject and then appends it with a unique number. 
             currenSign.name = item.signName + instanceNumber;
-            Image img = currenSign.GetComponent<Image>();
-            img.sprite = item.signImage;
+            RawImage img = currenSign.GetComponent<RawImage>();
+            img.texture = item.signImage;
             Button signButton = currenSign.GetComponent<Button>();
             signButton.onClick.AddListener(() => ButtonEffects(item));
 
             instanceNumber++;
         }
+    }
+
+    void SetTurnOrder()
+    {
+        TurnOrder.text = "it's the " + Turn + " turn!";
+    }
+
+    void UpdateEntityHealth()
+    {
+        PlayerHealthText.text = "Player's health: " + player.Playerhealth.ToString();
+        EnemyHealthText.text = "Enemy's health: " + currentEnemy.enemyHealth.ToString();
     }
 
     void ButtonEffects(Signs item)
@@ -66,7 +99,8 @@ public class Combat : MonoBehaviour
     private void EndPlayerTurn()
     {
         currentTurn = TurnState.EnemyTurn;
-        Debug.Log("is EnemyTurn");
+        Turn = "Enemy's";
+        Debug.Log("Enemy Turn");
         StartCoroutine(EnemyTurn());
     }
 
@@ -82,11 +116,19 @@ public class Combat : MonoBehaviour
         else
             {
                 currentEnemy.Attack(player);
+                StartCoroutine(PlayerHurt());
             }
         
         if (player.IsDead()) yield break;
-        Debug.Log("is PlayerTurn");
+        Turn = "Player's";
 
         currentTurn = TurnState.PlayerTurn;
+    }
+
+    private IEnumerator PlayerHurt()
+    {
+        enemyColor.color = Color.red;
+        yield return new WaitForSeconds(0.5f);
+        enemyColor.color = Color.white;
     }
 }

@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
 
     private void PlayerDie()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Game Over");
     }
 
     public bool IsDead()

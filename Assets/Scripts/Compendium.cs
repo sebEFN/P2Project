@@ -43,7 +43,7 @@ public class Compendium : MonoBehaviour
             GameObject currentSign = Instantiate(spawnSign, new Vector2(0, 0), Quaternion.identity);
             currentSign.transform.SetParent(listContainer, false);
             currentSign.name = item.signName;
-            currentSign.GetComponent<Image>().sprite = item.signImage;
+            currentSign.GetComponent<RawImage>().texture = item.signImage;
             currentSign.GetComponent<CompendiumCard>().sign = item;
             spawnedCards.Add(currentSign);
         }
