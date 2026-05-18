@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Signs
   signName: Eat
   sleep: 0
-  signImage: {fileID: 0}
+  signImage: {fileID: 8400000, guid: eeed4297247f7fa52b43c6da44e739f7, type: 2}
   damage: 3
   healing: 0
+  block: 0

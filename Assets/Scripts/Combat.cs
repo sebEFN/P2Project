@@ -58,8 +58,8 @@ public class Combat : MonoBehaviour
 
             // Sets the name of the instantiated entity to be the string defined in the ScriptableObject and then appends it with a unique number. 
             currenSign.name = item.signName + instanceNumber;
-            Image img = currenSign.GetComponent<Image>();
-            img.sprite = item.signImage;
+            RawImage img = currenSign.GetComponent<RawImage>();
+            img.texture = item.signImage;
             Button signButton = currenSign.GetComponent<Button>();
             signButton.onClick.AddListener(() => ButtonEffects(item));
 
