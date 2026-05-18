@@ -6,7 +6,7 @@ public class Signs : ScriptableObject
 {
     public string signName;
     public bool sleep;
-    public Sprite signImage;
+    public RenderTexture signImage;
     public int damage;
     public int healing;
     public int block;

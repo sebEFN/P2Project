@@ -10,10 +10,7 @@ public abstract class Enemy : MonoBehaviour
    public abstract void Attack(Player Playerhealth);
    public abstract void Snooze();
 
-    public virtual void Die()
-    {
-        Destroy(gameObject);
-    }
+    public abstract void Die();
 
     public bool IsDead()
     {
