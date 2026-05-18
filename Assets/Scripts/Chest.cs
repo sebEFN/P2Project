@@ -17,10 +17,10 @@ public class Chest : MonoBehaviour
         if (GetComponent<OnClick>().isclick == true)
         {
             GetComponent<OnClick>().isclick = false;
+            compendium.RefreshUI();
             foreach (var item in giveSign)
             {
-                compendium.signs.Add(item);
-                compendium.RefreshUI();
+                compendium.signs.Add(item);  
             }
             
             //Debug.Log("Collected " + giveSign.signName);
