@@ -901,7 +901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzelSlot
   correctSigns: {fileID: 11400000, guid: aac3022f695dbb3a38421812cf8b933e, type: 2}
-  nextScene: 9 Combat against goblino
+  nextScene: 11 Destroyed Mural
   SlotImage: {fileID: 686206281}
 --- !u!114 &686206281
 MonoBehaviour:
@@ -3591,7 +3591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzelSlot
   correctSigns: {fileID: 11400000, guid: aac3022f695dbb3a38421812cf8b933e, type: 2}
-  nextScene: 9 Combat against goblino
+  nextScene: 11 Destroyed Mural
   SlotImage: {fileID: 2091329242}
 --- !u!114 &2091329242
 MonoBehaviour:

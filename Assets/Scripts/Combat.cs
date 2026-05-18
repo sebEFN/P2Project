@@ -19,6 +19,7 @@ public class Combat : MonoBehaviour
     private string Turn;
     public TextMeshProUGUI EnemyHealthText;
     public TextMeshProUGUI PlayerHealthText;
+    private SpriteRenderer enemyColor;
 
 
       
@@ -34,6 +35,8 @@ public class Combat : MonoBehaviour
         SpawnEntities();
 
         Turn = "Player's";
+
+       enemyColor = currentEnemy.GetComponent<SpriteRenderer>();
 
 
     }
@@ -96,7 +99,7 @@ public class Combat : MonoBehaviour
     private void EndPlayerTurn()
     {
         currentTurn = TurnState.EnemyTurn;
-        Turn = "Goblin's";
+        Turn = "Enemy's";
         Debug.Log("Enemy Turn");
         StartCoroutine(EnemyTurn());
     }
@@ -113,11 +116,19 @@ public class Combat : MonoBehaviour
         else
             {
                 currentEnemy.Attack(player);
+                StartCoroutine(PlayerHurt());
             }
         
         if (player.IsDead()) yield break;
         Turn = "Player's";
 
         currentTurn = TurnState.PlayerTurn;
+    }
+
+    private IEnumerator PlayerHurt()
+    {
+        enemyColor.color = Color.red;
+        yield return new WaitForSeconds(0.5f);
+        enemyColor.color = Color.white;
     }
 }

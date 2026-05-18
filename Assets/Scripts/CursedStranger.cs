@@ -1,13 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Goblin : Enemy
+public class CursedStranger : Enemy
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        enemyHealth = 15;
-        enemyDamage = 3;
+        enemyHealth = 30;
+        enemyDamage = 2;
     }
 
     public override void Attack(Player Playerhealth)
