@@ -3,14 +3,23 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using System.Collections;
+using TMPro;
 
 public class Combat : MonoBehaviour
 {
     public GameObject spawnSign;
+    [Header("Fighter")]
     public Player player;
     public Enemy currentEnemy;
     public enum TurnState { PlayerTurn, EnemyTurn }
+
+    [Header("Text")]
     public TurnState currentTurn = TurnState.PlayerTurn;
+    public TextMeshProUGUI TurnOrder;
+    private string Turn;
+    public TextMeshProUGUI EnemyHealthText;
+    public TextMeshProUGUI PlayerHealthText;
+
 
       
 
@@ -23,6 +32,16 @@ public class Combat : MonoBehaviour
     void Start()
     {
         SpawnEntities();
+
+        Turn = "Player's";
+
+
+    }
+
+    void Update()
+    {
+        SetTurnOrder();
+        UpdateEntityHealth();
     }
 
     void SpawnEntities()
@@ -43,6 +62,17 @@ public class Combat : MonoBehaviour
 
             instanceNumber++;
         }
+    }
+
+    void SetTurnOrder()
+    {
+        TurnOrder.text = "it's the " + Turn + " turn!";
+    }
+
+    void UpdateEntityHealth()
+    {
+        PlayerHealthText.text = "Player's health: " + player.Playerhealth.ToString();
+        EnemyHealthText.text = "Enemy's health: " + currentEnemy.enemyHealth.ToString();
     }
 
     void ButtonEffects(Signs item)
@@ -66,7 +96,8 @@ public class Combat : MonoBehaviour
     private void EndPlayerTurn()
     {
         currentTurn = TurnState.EnemyTurn;
-        Debug.Log("is EnemyTurn");
+        Turn = "Goblin's";
+        Debug.Log("Enemy Turn");
         StartCoroutine(EnemyTurn());
     }
 
@@ -85,7 +116,7 @@ public class Combat : MonoBehaviour
             }
         
         if (player.IsDead()) yield break;
-        Debug.Log("is PlayerTurn");
+        Turn = "Player's";
 
         currentTurn = TurnState.PlayerTurn;
     }
