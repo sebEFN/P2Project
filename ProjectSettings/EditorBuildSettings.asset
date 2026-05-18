@@ -33,14 +33,29 @@ EditorBuildSettings:
     path: Assets/Scenes/Dungeon/6 Split path.unity
     guid: 528af85ca406cff4381ab3484346e9e1
   - enabled: 1
+    path: Assets/Scenes/Dungeon/7 cursed traveller.unity
+    guid: 9bfa96de38b9c1b45955dd150d9355ba
+  - enabled: 1
     path: Assets/Scenes/Dungeon/8 room.unity
     guid: d5fdcd5fac058a542bfc21f165813d45
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Dungeon/10 Book room.unity
     guid: cb92878c647dbb44d83a22e91f3242dc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Dungeon/11 Balcony.unity
     guid: 5bfe7d5847e22ec45aafbf229563d704
+  - enabled: 1
+    path: Assets/Scenes/Dungeon/9 Combat against goblino.unity
+    guid: c7bef46fd1cf88040bf5838bd4db71cc
+  - enabled: 1
+    path: Assets/Scenes/Dungeon/Game Over.unity
+    guid: 954b27e1380f6f540b37c9cd57ee545d
+  - enabled: 1
+    path: Assets/Scenes/Dungeon/11 Destroyed Mural.unity
+    guid: 43c8980c93662a84fbe3248aad402e1d
+  - enabled: 1
+    path: Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity
+    guid: c74847416f7705c4487e29a4310f36c5
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

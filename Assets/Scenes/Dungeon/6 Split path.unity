@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc21f632b1c310803a5fa0d02b0b6879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OnClick
-  scne: 8 room
+  scne: 7 Stairway
   isclick: 0
 --- !u!61 &281273773
 BoxCollider2D:
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc21f632b1c310803a5fa0d02b0b6879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OnClick
-  scne: 8 room
+  scne: 10 Combat Cursed Stranger
   isclick: 0
 --- !u!61 &2012050309
 BoxCollider2D:

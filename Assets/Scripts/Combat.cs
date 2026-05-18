@@ -1,11 +1,28 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using JetBrains.Annotations;
+using System.Collections;
+using TMPro;
 
 public class Combat : MonoBehaviour
 {
-      public GameObject spawnSign;
-      public int health;
+    public GameObject spawnSign;
+    [Header("Fighter")]
+    public Player player;
+    public Enemy currentEnemy;
+    public enum TurnState { PlayerTurn, EnemyTurn }
+
+    [Header("Text")]
+    public TurnState currentTurn = TurnState.PlayerTurn;
+    public TextMeshProUGUI TurnOrder;
+    private string Turn;
+    public TextMeshProUGUI EnemyHealthText;
+    public TextMeshProUGUI PlayerHealthText;
+    private SpriteRenderer enemyColor;
+
+
+      
 
     // An instance of the ScriptableObject defined above.
    [SerializeField] Compendium compendium;
@@ -15,7 +32,21 @@ public class Combat : MonoBehaviour
 
     void Start()
     {
+       compendium = GameObject.FindGameObjectWithTag("CompendiumTag").GetComponent<Compendium>();
         SpawnEntities();
+
+        Turn = "Player's";
+
+       enemyColor = currentEnemy.GetComponent<SpriteRenderer>();
+
+
+
+    }
+
+    void Update()
+    {
+        SetTurnOrder();
+        UpdateEntityHealth();
     }
 
     void SpawnEntities()
@@ -24,19 +55,82 @@ public class Combat : MonoBehaviour
         foreach(var item in compendium.signs)
         {
             // Creates an instance of the prefab at the current spawn point.
-            GameObject currenSign = Instantiate(spawnSign, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+            GameObject currenSign = Instantiate(spawnSign, new Vector2(0, 0), Quaternion.identity) as GameObject;
             currenSign.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
 
             // Sets the name of the instantiated entity to be the string defined in the ScriptableObject and then appends it with a unique number. 
             currenSign.name = item.signName + instanceNumber;
-            Image img = currenSign.GetComponent<Image>();
-            img.sprite = item.signImage;
+            RawImage img = currenSign.GetComponent<RawImage>();
+            img.texture = item.signImage;
+            Button signButton = currenSign.GetComponent<Button>();
+            signButton.onClick.AddListener(() => ButtonEffects(item));
 
             instanceNumber++;
         }
     }
-    void UpdateHealth()
+
+    void SetTurnOrder()
     {
-        health -= 1 ;
+        TurnOrder.text = "it's the " + Turn + " turn!";
+    }
+
+    void UpdateEntityHealth()
+    {
+        PlayerHealthText.text = "Player's health: " + player.Playerhealth.ToString();
+        EnemyHealthText.text = "Enemy's health: " + currentEnemy.enemyHealth.ToString();
+    }
+
+    void ButtonEffects(Signs item)
+    {
+        if (currentTurn != TurnState.PlayerTurn) return;
+
+        if (currentTurn == TurnState.PlayerTurn)
+        {
+        currentEnemy.enemyHealth -= item.damage;
+        currentEnemy.isSleeping = item.sleep;
+        player.Playerhealth += item.healing;
+        player.Playershield += item.block;
+        }
+
+        if (currentEnemy.IsDead()) return; //enemy died, stop here
+
+        EndPlayerTurn();
+
+    }
+
+    private void EndPlayerTurn()
+    {
+        currentTurn = TurnState.EnemyTurn;
+        Turn = "Enemy's";
+        Debug.Log("Enemy Turn");
+        StartCoroutine(EnemyTurn());
+    }
+
+    private IEnumerator EnemyTurn()
+    {
+        yield return new WaitForSeconds(1f); // small delay feels natural
+        
+        if (currentEnemy.isSleeping == true)
+        {
+            currentTurn = TurnState.PlayerTurn;   
+        }
+
+        else
+            {
+                currentEnemy.Attack(player);
+                StartCoroutine(PlayerHurt());
+            }
+        
+        if (player.IsDead()) yield break;
+        Turn = "Player's";
+
+        currentTurn = TurnState.PlayerTurn;
+    }
+
+    private IEnumerator PlayerHurt()
+    {
+        enemyColor.color = Color.red;
+        yield return new WaitForSeconds(0.5f);
+        enemyColor.color = Color.white;
     }
 }

@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d4dea0182cc9d749f878050ce0cac3, type: 3}
   m_Name: Sign1
   m_EditorClassIdentifier: Assembly-CSharp::Signs
-  signName: Correct
-  correct: 0
-  signImage: {fileID: 0}
+  signName: Eat
+  sleep: 0
+  signImage: {fileID: 8400000, guid: eeed4297247f7fa52b43c6da44e739f7, type: 2}
+  damage: 3
+  healing: 0
+  block: 0
