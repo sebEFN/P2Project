@@ -7,7 +7,7 @@ public class PuzzelSlot : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] Signs correctSigns;
     [SerializeField] string nextScene;
-    [SerializeField] Image SlotImage;
+    [SerializeField] RawImage SlotImage;
 
     public static int correctCount = 0;
     private Signs placedSign;
@@ -17,7 +17,7 @@ public class PuzzelSlot : MonoBehaviour, IPointerClickHandler
         if (SignSelector.Instance.selectedSign == null)
             return;
         placedSign = SignSelector.Instance.selectedSign;
-        SlotImage.sprite = placedSign.signImage;
+        SlotImage.texture = placedSign.signImage;
         SlotImage.color = Color.white;
 
         SignSelector.Instance.selectedSign = null;
@@ -40,7 +40,7 @@ public class PuzzelSlot : MonoBehaviour, IPointerClickHandler
         else
         {
             Debug.Log("Wrong");
-            SlotImage.sprite = null;
+            SlotImage.texture = null;
             SlotImage.color = Color.white;
             placedSign = null;
         }
