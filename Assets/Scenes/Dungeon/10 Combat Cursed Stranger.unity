@@ -1646,7 +1646,7 @@ MonoBehaviour:
   TurnOrder: {fileID: 1414331575}
   EnemyHealthText: {fileID: 1025490692}
   PlayerHealthText: {fileID: 569483536}
-  compendium: {fileID: 1440040887}
+  compendium: {fileID: 0}
 --- !u!114 &1354700455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2003,7 +2003,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1440040889}
   - component: {fileID: 1440040888}
-  - component: {fileID: 1440040887}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2011,24 +2010,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1440040887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440040886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bea5f028c146efcea7b767314b5262b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Compendium
-  signs:
-  - {fileID: 11400000, guid: aac3022f695dbb3a38421812cf8b933e, type: 2}
-  - {fileID: 11400000, guid: 81877b087cce533e995e2be40e095924, type: 2}
-  - {fileID: 11400000, guid: d82a2faaa36519bf2abf5c0514f6d64f, type: 2}
-  spawnSign: {fileID: 0}
-  listContainer: {fileID: 0}
 --- !u!114 &1440040888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2160,7 +2141,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1527636603
+--- !u!1 &1553111352
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2168,44 +2149,73 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1527636605}
-  - component: {fileID: 1527636604}
-  m_Layer: 0
-  m_Name: AudioManager
+  - component: {fileID: 1553111353}
+  - component: {fileID: 1553111355}
+  - component: {fileID: 1553111354}
+  m_Layer: 5
+  m_Name: Healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1527636604
+--- !u!224 &1553111353
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553111352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2064641811}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -880, y: 439}
+  m_SizeDelta: {x: 1200, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1553111354
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527636603}
+  m_GameObject: {fileID: 1553111352}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eac3f626e1c2062459f3d8566ac8466f, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
---- !u!4 &1527636605
-Transform:
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 8800536053038158436, guid: 428ee7767570b924693045028ee4dde7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1553111355
+CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527636603}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 427311186}
-  - {fileID: 2015054511}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 1553111352}
+  m_CullTransparentMesh: 1
 --- !u!1 &1561454727
 GameObject:
   m_ObjectHideFlags: 0
@@ -3481,6 +3491,7 @@ RectTransform:
   - {fileID: 1414331574}
   - {fileID: 1025490691}
   - {fileID: 569483535}
+  - {fileID: 1553111353}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

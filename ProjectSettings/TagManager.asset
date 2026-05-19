@@ -6,6 +6,7 @@ TagManager:
   tags:
   - outline
   - Canvas
+  - CompendiumTag
   layers:
   - Default
   - TransparentFX
