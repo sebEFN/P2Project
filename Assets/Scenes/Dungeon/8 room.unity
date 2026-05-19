@@ -765,7 +765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PuzzelSlot
   correctSigns: {fileID: 11400000, guid: aac3022f695dbb3a38421812cf8b933e, type: 2}
   nextScene: 11 Destroyed Mural
-  SlotImage: {fileID: 0}
+  SlotImage: {fileID: 686206283}
 --- !u!222 &686206282
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3451,7 +3451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PuzzelSlot
   correctSigns: {fileID: 11400000, guid: aac3022f695dbb3a38421812cf8b933e, type: 2}
   nextScene: 11 Destroyed Mural
-  SlotImage: {fileID: 0}
+  SlotImage: {fileID: 2091329244}
 --- !u!222 &2091329243
 CanvasRenderer:
   m_ObjectHideFlags: 0
