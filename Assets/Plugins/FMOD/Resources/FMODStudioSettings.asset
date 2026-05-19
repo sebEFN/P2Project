@@ -271,6 +271,7 @@ MonoBehaviour:
   - Master
   Banks:
   - GenCave
+  - Music
   - OutsideArea
   - SFX
   BanksToLoad: []
