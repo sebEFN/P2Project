@@ -992,7 +992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -26.776611, y: 1.5567017}
+  m_AnchoredPosition: {x: -26.776367, y: 1.5566406}
   m_SizeDelta: {x: 678.22, y: 326.0864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &496646998
@@ -1877,6 +1877,7 @@ GameObject:
   - component: {fileID: 1005466349}
   - component: {fileID: 1005466348}
   - component: {fileID: 1005466347}
+  - component: {fileID: 1005466350}
   m_Layer: 5
   m_Name: next
   m_TagString: Untagged
@@ -2010,6 +2011,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005466345}
   m_CullTransparentMesh: 1
+--- !u!114 &1005466350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005466345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c52ea4d00a1edf7b89e18f98c8c94a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Chest
+  giveSign:
+  - {fileID: 11400000, guid: 81877b087cce533e995e2be40e095924, type: 2}
+  - {fileID: 11400000, guid: d82a2faaa36519bf2abf5c0514f6d64f, type: 2}
+  compendium: {fileID: 0}
 --- !u!1 &1061197415
 GameObject:
   m_ObjectHideFlags: 0
@@ -2218,7 +2235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00012207031, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -2326.1733, y: -1334.2017}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1070572772
