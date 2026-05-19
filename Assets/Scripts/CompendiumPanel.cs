@@ -3,7 +3,7 @@ using UnityEngine;
 public class CompendiumPanel : MonoBehaviour
 {
     [SerializeField] GameObject compendiumPanel;
-    [SerializeField] Compendium compendium;
+    [SerializeField] GetSign compendium;
 
     public void ToggleCompendium()
     {

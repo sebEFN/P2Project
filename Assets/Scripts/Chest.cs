@@ -26,4 +26,14 @@ public class Chest : MonoBehaviour
             //Debug.Log("Collected " + giveSign.signName);
         }
     }
+
+    public void tutorial()
+    {
+ 
+        compendium.RefreshUI();
+        foreach (var item in giveSign)
+        {
+            compendium.signs.Add(item);
+        }
+    }
 }
