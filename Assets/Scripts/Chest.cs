@@ -8,7 +8,7 @@ public class Chest : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+         compendium = GameObject.FindGameObjectWithTag("CompendiumTag").GetComponent<Compendium>();
     }
 
     // Update is called once per frame
