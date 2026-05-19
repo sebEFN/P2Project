@@ -59,6 +59,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity
     guid: c74847416f7705c4487e29a4310f36c5
+  - enabled: 1
+    path: Assets/Scenes/Dungeon/7 Stairway.unity
+    guid: d728cfd06bb27ec42af7b50d994217b6
+  - enabled: 1
+    path: Assets/Scenes/Dungeon/8 goblins.unity
+    guid: 697e64a961788a24890ae89cc387f628
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

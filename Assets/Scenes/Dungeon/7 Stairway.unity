@@ -534,7 +534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc21f632b1c310803a5fa0d02b0b6879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OnClick
-  scne: 9 Combat against goblino
+  scne: 8 goblins
   isclick: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
