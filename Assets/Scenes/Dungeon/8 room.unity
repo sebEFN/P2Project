@@ -2944,9 +2944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Chest
   giveSign:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 2a0acd9feb6cecb48b99fc39d5b640a9, type: 2}
   compendium: {fileID: 0}
 --- !u!114 &1815418083
 MonoBehaviour:
