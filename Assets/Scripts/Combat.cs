@@ -55,14 +55,14 @@ public class Combat : MonoBehaviour
         foreach(var item in compendium.signs)
         {
             // Creates an instance of the prefab at the current spawn point.
-            GameObject currenSign = Instantiate(spawnSign, new Vector2(0, 0), Quaternion.identity) as GameObject;
-            currenSign.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
+            GameObject currentSign = Instantiate(spawnSign, new Vector2(0, 0), Quaternion.identity) as GameObject;
+            currentSign.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
 
             // Sets the name of the instantiated entity to be the string defined in the ScriptableObject and then appends it with a unique number. 
-            currenSign.name = item.signName + instanceNumber;
-            RawImage img = currenSign.GetComponent<RawImage>();
+            currentSign.name = item.signName + instanceNumber;
+            RawImage img = currentSign.GetComponent<RawImage>();
             img.texture = item.signImage;
-            Button signButton = currenSign.GetComponent<Button>();
+            Button signButton = currentSign.GetComponent<Button>();
             signButton.onClick.AddListener(() => ButtonEffects(item));
 
             instanceNumber++;
