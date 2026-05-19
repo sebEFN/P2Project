@@ -1380,6 +1380,20 @@ MonoBehaviour:
       Data3: -16965962
       Data4: -1211948779
     Path: event:/TapMenu
+  <Footsteps>k__BackingField:
+    Guid:
+      Data1: 890367323
+      Data2: 1174731250
+      Data3: -877698926
+      Data4: -640590017
+    Path: event:/Footsteps
+  <ThreeCases>k__BackingField:
+    Guid:
+      Data1: -22909853
+      Data2: 1150708504
+      Data3: 1972333488
+      Data4: 675928578
+    Path: event:/ThreeCases
 --- !u!1 &798520729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1674,7 +1688,7 @@ SpriteRenderer:
   m_Size: {x: 19.19, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &918165023
 Transform:
