@@ -22,6 +22,6 @@ public class CursedStranger : Enemy
 
     public override void Die()
     {
-        SceneManager.LoadScene("8 room");
+        SceneManager.LoadScene("7.2 cursed traveller part 2");
     }
 }

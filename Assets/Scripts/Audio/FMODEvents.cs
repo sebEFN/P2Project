@@ -12,6 +12,11 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Menu Button Tap")]
     [field: SerializeField] public EventReference TapMenu { get; private set; }
 
+    [field: Header("Footsteps")]
+    [field: SerializeField] public EventReference Footsteps { get; private set; }
+
+    [field: Header("ThreeCases")]
+    [field: SerializeField] public EventReference ThreeCases { get; private set; }
     public static FMODEvents Instance { get; private set; }
     
     private void Awake()
