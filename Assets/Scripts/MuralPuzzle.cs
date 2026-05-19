@@ -25,7 +25,7 @@ public class MuralPuzzle : MonoBehaviour
 
             if (currentIndex < progressSprites.Length)
             {
-                progressSprites[currentIndex].SetActive(true);
+                progressSprites[currentIndex].SetActive(false);
             }
 
             currentIndex++;
@@ -62,7 +62,7 @@ public class MuralPuzzle : MonoBehaviour
     {
         foreach (GameObject sprite in progressSprites)
         {
-            sprite.SetActive(false);
+            sprite.SetActive(true);
         }
     }
 }
