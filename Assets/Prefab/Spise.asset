@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20d4dea0182cc9d749f878050ce0cac3, type: 3}
-  m_Name: Sign2
+  m_Name: Spise
   m_EditorClassIdentifier: Assembly-CSharp::Signs
-  signName: medicine
+  signName: Eat
   sleep: 0
-  signImage: {fileID: 8400000, guid: 43bd34f1d9ab587358bb1c0210da5810, type: 2}
-  damage: 0
-  healing: 2
+  signImage: {fileID: 8400000, guid: eeed4297247f7fa52b43c6da44e739f7, type: 2}
+  damage: 3
+  healing: 0
   block: 0
