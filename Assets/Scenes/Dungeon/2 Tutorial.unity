@@ -2075,6 +2075,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803845425}
   m_CullTransparentMesh: 1
+--- !u!1 &951740448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 951740450}
+  - component: {fileID: 951740449}
+  m_Layer: 0
+  m_Name: background (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!212 &951740449
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951740448}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 1318317341
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 1639100921975794417, guid: c681520f093140046b4d294c199fe3a6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 38.399998, y: 21.599998}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!4 &951740450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951740448}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.2284, y: 0, z: 0}
+  m_LocalScale: {x: 1.32, y: 1.32, z: 2.2}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &974750658
 GameObject:
   m_ObjectHideFlags: 0
@@ -2386,7 +2477,7 @@ GameObject:
   - component: {fileID: 1064822014}
   - component: {fileID: 1064822013}
   - component: {fileID: 1064822012}
-  - component: {fileID: 1064822015}
+  - component: {fileID: 1064822016}
   m_Layer: 0
   m_Name: Entrance
   m_TagString: Untagged
@@ -2406,7 +2497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc21f632b1c310803a5fa0d02b0b6879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OnClick
-  scne: 3grotto
+  scne: 
   isclick: 0
 --- !u!61 &1064822013
 BoxCollider2D:
@@ -2469,7 +2560,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1064822015
+--- !u!114 &1064822016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2478,13 +2569,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1064822011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c52ea4d00a1edf7b89e18f98c8c94a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 1312fb9981fbdb8b99d3d956f0703d4c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Chest
-  giveSign:
-  - {fileID: 11400000, guid: 81877b087cce533e995e2be40e095924, type: 2}
-  - {fileID: 11400000, guid: d82a2faaa36519bf2abf5c0514f6d64f, type: 2}
-  compendium: {fileID: 1190331618}
+  m_EditorClassIdentifier: Assembly-CSharp::Interact
+  framenow: {fileID: 785301391}
+  nextFrame: {fileID: 951740448}
 --- !u!1 &1070572770
 GameObject:
   m_ObjectHideFlags: 0
@@ -3875,6 +3964,7 @@ SceneRoots:
   - {fileID: 701251198}
   - {fileID: 1212104775}
   - {fileID: 785301393}
+  - {fileID: 951740450}
   - {fileID: 1869792628}
   - {fileID: 1061197418}
   - {fileID: 1064822014}
