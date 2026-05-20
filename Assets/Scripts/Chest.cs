@@ -22,7 +22,7 @@ public class Chest : MonoBehaviour
             {
                 compendium.signs.Add(item);  
             }
-            
+            this.enabled = false;
             //Debug.Log("Collected " + giveSign.signName);
         }
     }
