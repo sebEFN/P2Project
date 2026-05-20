@@ -1,0 +1,130 @@
+@startuml
+class AudioManager {
+    - eventInstances : List<EventInstance>
+    - ambienceEventInstance : EventInstance
+}
+class FMODEvents {
+}
+class Chest {
+}
+class CanvasSwitcher {
+    + canvas1 : GameObject
+    + canvas2 : GameObject
+    + openchest : GameObject
+}
+class Combat {
+    + spawnSign : GameObject
+    + spawnCard : GameObject
+    + player : Player
+    + currentEnemy : Enemy
+    + currentTurn : TurnState
+    + TurnOrder : TextMeshProUGUI
+    - Turn : string
+    + EnemyHealthText : TextMeshProUGUI
+    + PlayerHealthText : TextMeshProUGUI
+    - enemyColor : SpriteRenderer
+}
+class Compendium {
+    + instance : Compendium
+    + signs : List<Signs>
+}
+class CompendiumCard {
+    + sign : Signs
+}
+class CompendiumPanel {
+}
+class CursedStranger {
+}
+class Enemy <<abstract>> {
+    + enemyHealth : int
+    + enemyDamage : int
+    + isSleeping : bool
+    + Attack(Playerhealth : Player) : void
+    + Snooze() : void
+    + Die() : void
+}
+class Exit {
+}
+class GetSign {
+}
+class Goblin {
+}
+class Interact {
+    + framenow : GameObject
+    + nextFrame : GameObject
+}
+class MuralPuzzle {
+    + correctSequence : string[]
+    + currentcanvas : GameObject
+    + nextcanvas : GameObject
+    + progressSprites : GameObject[]
+    - currentIndex : int
+}
+class OnClick {
+    + scne : string
+    + isclick : bool
+}
+class Player {
+    + Playerhealth : int
+    + Playershield : int
+}
+class PuzzelSlot {
+    + correctCount : int
+    - placedSign : Signs
+}
+class SignPuzzleButton {
+    + SignButton : Button
+}
+class Signs {
+    + signName : string
+    + sleep : bool
+    + signImage : RenderTexture
+    + damage : int
+    + healing : int
+    + block : int
+}
+class SignSelector {
+    + Instance : SignSelector
+    + selectedSign : Signs
+}
+class SwitchScene {
+    + MyScene : string
+}
+class Tutorial {
+    + Mirror : GameObject
+}
+MonoBehaviour <|-- AudioManager
+MonoBehaviour <|-- FMODEvents
+MonoBehaviour <|-- Chest
+MonoBehaviour <|-- CanvasSwitcher
+MonoBehaviour <|-- Combat
+MonoBehaviour <|-- Compendium
+MonoBehaviour <|-- CompendiumCard
+IPointerClickHandler <|.. CompendiumCard
+MonoBehaviour <|-- CompendiumPanel
+Enemy <|-- CursedStranger
+MonoBehaviour <|-- Enemy
+MonoBehaviour <|-- Exit
+MonoBehaviour <|-- GetSign
+Enemy <|-- Goblin
+MonoBehaviour <|-- Interact
+MonoBehaviour <|-- MuralPuzzle
+MonoBehaviour <|-- OnClick
+IPointerClickHandler <|.. OnClick
+MonoBehaviour <|-- Player
+MonoBehaviour <|-- PuzzelSlot
+IPointerClickHandler <|.. PuzzelSlot
+MonoBehaviour <|-- SignPuzzleButton
+ScriptableObject <|-- Signs
+MonoBehaviour <|-- SignSelector
+MonoBehaviour <|-- SwitchScene
+MonoBehaviour <|-- Tutorial
+Combat --> Player : player
+Combat --> Enemy : currentEnemy, Attack()
+CompendiumCard --> Signs : sign
+CursedStranger --> Enemy : Attack(), Snooze(), Die()
+Enemy --> Player : Attack(Playerhealth)
+Goblin --> Enemy : Attack(), Snooze(), Die()
+PuzzelSlot --> Signs : placedSign
+SignSelector --> Signs : selectedSign
+@enduml
