@@ -9,6 +9,12 @@
         "name": "Animation",
         "dependencies": [
           {
+            "name": "AnimationClip",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "Animator",
             "scenes": [],
             "dependencyType": 0,
@@ -27,10 +33,34 @@
             "icon": null
           },
           {
+            "name": "Avatar",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "AvatarMask",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "Motion",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "RuntimeAnimatorController",
             "scenes": [],
             "dependencyType": 1,
             "icon": null
+          },
+          {
+            "name": "Required by Director Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.director"
           }
         ]
       },
@@ -51,13 +81,21 @@
           {
             "name": "AudioBehaviour",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 MainScene.unity",
-              "Assets/Scenes/Dungeon/1 Menu.unity",
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
               "Assets/Scenes/Dungeon/3grotto.unity",
-              "Assets/Scenes/Harman.unity",
-              "Assets/Scenes/Momoh.unity",
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/6 Split path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7 Stairway.unity",
+              "Assets/Scenes/Dungeon/7.2 cursed traveller part 2.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity",
+              "Assets/Scenes/Dungeon/Game Over.unity",
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -71,13 +109,21 @@
           {
             "name": "AudioListener",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 MainScene.unity",
-              "Assets/Scenes/Dungeon/1 Menu.unity",
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
               "Assets/Scenes/Dungeon/3grotto.unity",
-              "Assets/Scenes/Harman.unity",
-              "Assets/Scenes/Momoh.unity",
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/6 Split path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7 Stairway.unity",
+              "Assets/Scenes/Dungeon/7.2 cursed traveller part 2.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity",
+              "Assets/Scenes/Dungeon/Game Over.unity",
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -92,6 +138,12 @@
             "name": "AudioResource",
             "scenes": [],
             "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "AudioSource",
+            "scenes": [],
+            "dependencyType": 0,
             "icon": null
           },
           {
@@ -111,6 +163,18 @@
             "scenes": [],
             "dependencyType": 0,
             "icon": null
+          },
+          {
+            "name": "Required by Director Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.director"
+          },
+          {
+            "name": "Required by Video Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.video"
           }
         ]
       },
@@ -132,13 +196,21 @@
           {
             "name": "Camera",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 MainScene.unity",
-              "Assets/Scenes/Dungeon/1 Menu.unity",
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
               "Assets/Scenes/Dungeon/3grotto.unity",
-              "Assets/Scenes/Harman.unity",
-              "Assets/Scenes/Momoh.unity",
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/6 Split path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7 Stairway.unity",
+              "Assets/Scenes/Dungeon/7.2 cursed traveller part 2.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity",
+              "Assets/Scenes/Dungeon/Game Over.unity",
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -152,7 +224,7 @@
           {
             "name": "ComputeShader",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 MainScene.unity"
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -160,12 +232,21 @@
           {
             "name": "Cubemap",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 Menu.unity",
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
               "Assets/Scenes/Dungeon/3grotto.unity",
-              "Assets/Scenes/Harman.unity",
-              "Assets/Scenes/Momoh.unity",
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/6 Split path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7 Stairway.unity",
+              "Assets/Scenes/Dungeon/7.2 cursed traveller part 2.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity",
+              "Assets/Scenes/Dungeon/Game Over.unity",
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -185,13 +266,21 @@
           {
             "name": "EditorExtension",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 MainScene.unity",
-              "Assets/Scenes/Dungeon/1 Menu.unity",
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
               "Assets/Scenes/Dungeon/3grotto.unity",
-              "Assets/Scenes/Harman.unity",
-              "Assets/Scenes/Momoh.unity",
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/6 Split path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7 Stairway.unity",
+              "Assets/Scenes/Dungeon/7.2 cursed traveller part 2.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity",
+              "Assets/Scenes/Dungeon/Game Over.unity",
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -205,13 +294,21 @@
           {
             "name": "GameObject",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 MainScene.unity",
-              "Assets/Scenes/Dungeon/1 Menu.unity",
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
               "Assets/Scenes/Dungeon/3grotto.unity",
-              "Assets/Scenes/Harman.unity",
-              "Assets/Scenes/Momoh.unity",
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/6 Split path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7 Stairway.unity",
+              "Assets/Scenes/Dungeon/7.2 cursed traveller part 2.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity",
+              "Assets/Scenes/Dungeon/Game Over.unity",
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -243,13 +340,21 @@
           {
             "name": "LevelGameManager",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 MainScene.unity",
-              "Assets/Scenes/Dungeon/1 Menu.unity",
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
               "Assets/Scenes/Dungeon/3grotto.unity",
-              "Assets/Scenes/Harman.unity",
-              "Assets/Scenes/Momoh.unity",
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/6 Split path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7 Stairway.unity",
+              "Assets/Scenes/Dungeon/7.2 cursed traveller part 2.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity",
+              "Assets/Scenes/Dungeon/Game Over.unity",
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -281,13 +386,21 @@
           {
             "name": "LightmapSettings",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 MainScene.unity",
-              "Assets/Scenes/Dungeon/1 Menu.unity",
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
               "Assets/Scenes/Dungeon/3grotto.unity",
-              "Assets/Scenes/Harman.unity",
-              "Assets/Scenes/Momoh.unity",
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/6 Split path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7 Stairway.unity",
+              "Assets/Scenes/Dungeon/7.2 cursed traveller part 2.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity",
+              "Assets/Scenes/Dungeon/Game Over.unity",
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -307,11 +420,20 @@
           {
             "name": "Material",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 MainScene.unity",
-              "Assets/Scenes/Dungeon/1 Menu.unity",
-              "Assets/Scenes/Harman.unity",
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/6 Split path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7 Stairway.unity",
+              "Assets/Scenes/Dungeon/7.2 cursed traveller part 2.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity",
+              "Assets/Scenes/Dungeon/Game Over.unity",
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -337,11 +459,21 @@
           {
             "name": "MonoBehaviour",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 MainScene.unity",
-              "Assets/Scenes/Dungeon/1 Menu.unity",
-              "Assets/Scenes/Harman.unity",
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
+              "Assets/Scenes/Dungeon/3grotto.unity",
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/6 Split path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7 Stairway.unity",
+              "Assets/Scenes/Dungeon/7.2 cursed traveller part 2.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity",
+              "Assets/Scenes/Dungeon/Game Over.unity",
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -355,11 +487,21 @@
           {
             "name": "MonoScript",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 MainScene.unity",
-              "Assets/Scenes/Dungeon/1 Menu.unity",
-              "Assets/Scenes/Harman.unity",
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
+              "Assets/Scenes/Dungeon/3grotto.unity",
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/6 Split path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7 Stairway.unity",
+              "Assets/Scenes/Dungeon/7.2 cursed traveller part 2.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity",
+              "Assets/Scenes/Dungeon/Game Over.unity",
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -367,13 +509,21 @@
           {
             "name": "NamedObject",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 MainScene.unity",
-              "Assets/Scenes/Dungeon/1 Menu.unity",
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
               "Assets/Scenes/Dungeon/3grotto.unity",
-              "Assets/Scenes/Harman.unity",
-              "Assets/Scenes/Momoh.unity",
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/6 Split path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7 Stairway.unity",
+              "Assets/Scenes/Dungeon/7.2 cursed traveller part 2.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity",
+              "Assets/Scenes/Dungeon/Game Over.unity",
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -411,11 +561,19 @@
           {
             "name": "RectTransform",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 MainScene.unity",
-              "Assets/Scenes/Dungeon/1 Menu.unity",
-              "Assets/Scenes/Harman.unity",
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
+              "Assets/Scenes/Dungeon/3grotto.unity",
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7.2 cursed traveller part 2.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity",
+              "Assets/Scenes/Dungeon/Game Over.unity",
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -429,28 +587,51 @@
           {
             "name": "RenderSettings",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 MainScene.unity",
-              "Assets/Scenes/Dungeon/1 Menu.unity",
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
               "Assets/Scenes/Dungeon/3grotto.unity",
-              "Assets/Scenes/Harman.unity",
-              "Assets/Scenes/Momoh.unity",
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/6 Split path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7 Stairway.unity",
+              "Assets/Scenes/Dungeon/7.2 cursed traveller part 2.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity",
+              "Assets/Scenes/Dungeon/Game Over.unity",
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "RenderTexture",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "Renderer",
             "scenes": [
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/6 Split path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7 Stairway.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -470,11 +651,20 @@
           {
             "name": "Shader",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 MainScene.unity",
-              "Assets/Scenes/Dungeon/1 Menu.unity",
-              "Assets/Scenes/Harman.unity",
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/6 Split path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7 Stairway.unity",
+              "Assets/Scenes/Dungeon/7.2 cursed traveller part 2.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity",
+              "Assets/Scenes/Dungeon/Game Over.unity",
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -500,11 +690,21 @@
           {
             "name": "Sprite",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 MainScene.unity",
-              "Assets/Scenes/Dungeon/1 Menu.unity",
-              "Assets/Scenes/Harman.unity",
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
+              "Assets/Scenes/Dungeon/3grotto.unity",
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/6 Split path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7 Stairway.unity",
+              "Assets/Scenes/Dungeon/7.2 cursed traveller part 2.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity",
+              "Assets/Scenes/Dungeon/Game Over.unity",
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -518,8 +718,16 @@
           {
             "name": "SpriteRenderer",
             "scenes": [
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/6 Split path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7 Stairway.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -603,6 +811,12 @@
             "icon": "package/com.unity.modules.crashreporting"
           },
           {
+            "name": "Required by Director Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.director"
+          },
+          {
             "name": "Required by GraphicsStateCollectionSerializer Module",
             "scenes": [],
             "dependencyType": 2,
@@ -673,6 +887,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.jsonserialize"
+          },
+          {
+            "name": "Required by ParticleSystem Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.particlesystem"
           },
           {
             "name": "Required by Physics Module",
@@ -819,6 +1039,12 @@
             "icon": "package/com.unity.modules.vr"
           },
           {
+            "name": "Required by Video Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.video"
+          },
+          {
             "name": "Required by XR Module",
             "scenes": [],
             "dependencyType": 2,
@@ -834,6 +1060,17 @@
             "scenes": [],
             "dependencyType": 3,
             "icon": "class/PlayerSettings"
+          }
+        ]
+      },
+      {
+        "name": "Director",
+        "dependencies": [
+          {
+            "name": "PlayableDirector",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
           }
         ]
       },
@@ -1059,6 +1296,23 @@
         ]
       },
       {
+        "name": "ParticleSystem",
+        "dependencies": [
+          {
+            "name": "ParticleSystem",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "ParticleSystemRenderer",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          }
+        ]
+      },
+      {
         "name": "Physics",
         "dependencies": [
           {
@@ -1117,7 +1371,15 @@
           {
             "name": "BoxCollider2D",
             "scenes": [
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
+              "Assets/Scenes/Dungeon/3grotto.unity",
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/6 Split path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7 Stairway.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1237,6 +1499,12 @@
             "icon": "package/com.unity.modules.crashreporting"
           },
           {
+            "name": "Required by Director Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.director"
+          },
+          {
             "name": "Required by GraphicsStateCollectionSerializer Module",
             "scenes": [],
             "dependencyType": 2,
@@ -1307,6 +1575,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.jsonserialize"
+          },
+          {
+            "name": "Required by ParticleSystem Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.particlesystem"
           },
           {
             "name": "Required by Physics Module",
@@ -1453,6 +1727,12 @@
             "icon": "package/com.unity.modules.vr"
           },
           {
+            "name": "Required by Video Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.video"
+          },
+          {
             "name": "Required by XR Module",
             "scenes": [],
             "dependencyType": 2,
@@ -1518,6 +1798,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.unitywebrequest"
+          },
+          {
+            "name": "Required by Video Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.video"
           }
         ]
       },
@@ -1578,10 +1864,16 @@
           {
             "name": "Font",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 MainScene.unity",
-              "Assets/Scenes/Dungeon/1 Menu.unity",
-              "Assets/Scenes/Harman.unity",
-              "Assets/Scenes/Peter.unity"
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7.2 cursed traveller part 2.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity",
+              "Assets/Scenes/Dungeon/Game Over.unity",
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1653,11 +1945,19 @@
           {
             "name": "Canvas",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 MainScene.unity",
-              "Assets/Scenes/Dungeon/1 Menu.unity",
-              "Assets/Scenes/Harman.unity",
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
+              "Assets/Scenes/Dungeon/3grotto.unity",
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7.2 cursed traveller part 2.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity",
+              "Assets/Scenes/Dungeon/Game Over.unity",
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1671,11 +1971,19 @@
           {
             "name": "CanvasRenderer",
             "scenes": [
-              "Assets/Scenes/Dungeon/1 MainScene.unity",
-              "Assets/Scenes/Dungeon/1 Menu.unity",
-              "Assets/Scenes/Harman.unity",
-              "Assets/Scenes/Peter.unity",
-              "Assets/Scenes/Sebastian ;3.unity"
+              "Assets/Scenes/Dungeon/10 Combat Cursed Stranger.unity",
+              "Assets/Scenes/Dungeon/11 Destroyed Mural.unity",
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
+              "Assets/Scenes/Dungeon/3grotto.unity",
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity",
+              "Assets/Scenes/Dungeon/7 cursed traveller.unity",
+              "Assets/Scenes/Dungeon/7.2 cursed traveller part 2.unity",
+              "Assets/Scenes/Dungeon/8 goblins.unity",
+              "Assets/Scenes/Dungeon/8 room.unity",
+              "Assets/Scenes/Dungeon/9 Combat against goblino.unity",
+              "Assets/Scenes/Dungeon/Game Over.unity",
+              "Assets/Scenes/Harman.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1685,6 +1993,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.uielements"
+          },
+          {
+            "name": "Required by Video Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.video"
           }
         ]
       },
@@ -1805,6 +2119,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.unityanalytics"
+          },
+          {
+            "name": "Required by Video Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.video"
           }
         ]
       },
@@ -1846,6 +2166,29 @@
       {
         "name": "VR",
         "dependencies": []
+      },
+      {
+        "name": "Video",
+        "dependencies": [
+          {
+            "name": "VideoClip",
+            "scenes": [
+              "Assets/Scenes/Dungeon/2 Tutorial.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "VideoPlayer",
+            "scenes": [
+              "Assets/Scenes/Dungeon/2 Tutorial.unity",
+              "Assets/Scenes/Dungeon/4 Path to chest.unity",
+              "Assets/Scenes/Dungeon/4.1 path.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          }
+        ]
       },
       {
         "name": "XR",
