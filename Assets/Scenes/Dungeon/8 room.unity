@@ -3447,7 +3447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 226f6a2d6f8e45149a5ccaaadc096b87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzelSlot
-  correctSigns: {fileID: 11400000, guid: aac3022f695dbb3a38421812cf8b933e, type: 2}
+  correctSigns: {fileID: 11400000, guid: 2a0acd9feb6cecb48b99fc39d5b640a9, type: 2}
   nextScene: 11 Destroyed Mural
   SlotImage: {fileID: 2091329244}
 --- !u!222 &2091329243

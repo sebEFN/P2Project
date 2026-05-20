@@ -17,7 +17,7 @@ public class Chest : MonoBehaviour
         if (GetComponent<OnClick>().isclick == true)
         {
             GetComponent<OnClick>().isclick = false;
-            compendium.RefreshUI();
+            //compendium.RefreshUI();
             foreach (var item in giveSign)
             {
                 compendium.signs.Add(item);  

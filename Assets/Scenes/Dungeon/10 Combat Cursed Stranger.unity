@@ -1640,6 +1640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Combat
   spawnSign: {fileID: 7389967475319026305, guid: ad9ebbcac10bfd3ef963269b57e42277, type: 3}
+  spawnCard: {fileID: 1978149826432064960, guid: 8bba7c775a67c69b3bbe287ddada56bd, type: 3}
   player: {fileID: 5062395}
   currentEnemy: {fileID: 1731171436}
   currentTurn: 0
