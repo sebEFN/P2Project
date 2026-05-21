@@ -2426,7 +2426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1432925419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2600,6 +2600,7 @@ GameObject:
   - component: {fileID: 1552281604}
   - component: {fileID: 1552281603}
   - component: {fileID: 1552281606}
+  - component: {fileID: 1552281607}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2734,6 +2735,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwitchScene
   MyScene: 
+--- !u!114 &1552281607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552281601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bea5f028c146efcea7b767314b5262b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Compendium
+  signs:
+  - {fileID: 11400000, guid: f561d5562d955a515916a5eaedf2f812, type: 2}
+  - {fileID: 11400000, guid: aac3022f695dbb3a38421812cf8b933e, type: 2}
+  spawnSign: {fileID: 0}
+  listContainer: {fileID: 0}
 --- !u!1 &1656669806
 GameObject:
   m_ObjectHideFlags: 0
