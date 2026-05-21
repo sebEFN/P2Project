@@ -70,6 +70,15 @@ public class Combat : MonoBehaviour
             signButton.onClick.AddListener(() => ButtonEffects(item));
             Button cardButton = currentCard.GetComponent<Button>();
             cardButton.onClick.AddListener(() => CardEffect(currentCard));
+            TextMeshProUGUI buttonText = currentCard.GetComponentInChildren<TextMeshProUGUI>();
+            buttonText.text = item.signName;
+            TextMeshProUGUI damageText = currentSign.transform.Find("DamageText").GetComponent<TextMeshProUGUI>();
+            if (item.damage !=0)
+            damageText.text = "Damage " + item.damage;
+            TextMeshProUGUI healText = currentSign.transform.Find("HealText").GetComponent<TextMeshProUGUI>();
+            if (item.healing !=0)
+            healText.text = "Heal " + item.healing;
+
         }
     }
 
