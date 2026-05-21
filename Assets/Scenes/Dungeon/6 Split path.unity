@@ -670,7 +670,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2095666755}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -1242,6 +1242,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32ad47ad7c0b40891aad92d1fca6d098, type: 3}
+--- !u!1 &2095666755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6653299316602098118, guid: 32ad47ad7c0b40891aad92d1fca6d098, type: 3}
+  m_PrefabInstance: {fileID: 2095666754}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
