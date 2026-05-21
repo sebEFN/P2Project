@@ -30,7 +30,7 @@ public class Chest : MonoBehaviour
     public void tutorial()
     {
  
-        compendium.RefreshUI();
+        
         foreach (var item in giveSign)
         {
             compendium.signs.Add(item);
