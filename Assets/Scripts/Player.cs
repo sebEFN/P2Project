@@ -29,8 +29,5 @@ public class Player : MonoBehaviour
         if (Playerhealth <= 0 ) PlayerDie();
     }
 
-    /*void Update()
-    {
-        PlayerTakeDamage();
-    }*/
+    
 }
