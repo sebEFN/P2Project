@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 
 public class Combat : MonoBehaviour
 {
     public GameObject spawnSign;
+    public GameObject spawnCard;
     [Header("Fighter")]
     public Player player;
     public Enemy currentEnemy;
@@ -28,7 +30,6 @@ public class Combat : MonoBehaviour
    [SerializeField] Compendium compendium;
 
     // This will be appended to the name of the created entities and increment when each is created.
-    int instanceNumber = 1;
 
     void Start()
     {
@@ -54,18 +55,30 @@ public class Combat : MonoBehaviour
 
         foreach(var item in compendium.signs)
         {
+            GameObject currentCard = Instantiate(spawnCard, new Vector2(0, 0), Quaternion.identity) as GameObject;
             // Creates an instance of the prefab at the current spawn point.
-            GameObject currenSign = Instantiate(spawnSign, new Vector2(0, 0), Quaternion.identity) as GameObject;
-            currenSign.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
+            GameObject currentSign = Instantiate(spawnSign, new Vector2(200, 1700), Quaternion.identity) as GameObject;
+            currentCard.transform.SetParent (GameObject.FindGameObjectWithTag("Canvas").transform, false);
+            currentSign.transform.SetParent (currentCard.transform, false);
 
             // Sets the name of the instantiated entity to be the string defined in the ScriptableObject and then appends it with a unique number. 
-            currenSign.name = item.signName + instanceNumber;
-            RawImage img = currenSign.GetComponent<RawImage>();
+            currentSign.name = item.signName;
+            currentCard.name = "meow";
+            RawImage img = currentSign.GetComponent<RawImage>();
             img.texture = item.signImage;
-            Button signButton = currenSign.GetComponent<Button>();
+            Button signButton = currentSign.GetComponent<Button>();
             signButton.onClick.AddListener(() => ButtonEffects(item));
+            Button cardButton = currentCard.GetComponent<Button>();
+            cardButton.onClick.AddListener(() => CardEffect(currentCard));
+            TextMeshProUGUI buttonText = currentCard.GetComponentInChildren<TextMeshProUGUI>();
+            buttonText.text = item.signName;
+            TextMeshProUGUI damageText = currentSign.transform.Find("DamageText").GetComponent<TextMeshProUGUI>();
+            if (item.damage !=0)
+            damageText.text = "Damage " + item.damage;
+            TextMeshProUGUI healText = currentSign.transform.Find("HealText").GetComponent<TextMeshProUGUI>();
+            if (item.healing !=0)
+            healText.text = "Heal " + item.healing;
 
-            instanceNumber++;
         }
     }
 
@@ -95,6 +108,25 @@ public class Combat : MonoBehaviour
         if (currentEnemy.IsDead()) return; //enemy died, stop here
 
         EndPlayerTurn();
+
+    }
+    void CardEffect(GameObject card)
+    {
+        Debug.Log("grrr");
+        if (currentTurn != TurnState.PlayerTurn) return;
+
+        if (currentTurn == TurnState.PlayerTurn)
+        {
+            if (card.transform.GetChild(1).gameObject.activeInHierarchy == false)
+                card.transform.GetChild(1).gameObject.SetActive(true);
+            else
+            {
+                card.transform.GetChild(1).gameObject.SetActive(false);
+            }
+        }
+
+        if (currentEnemy.IsDead()) return; //enemy died, stop here
+
 
     }
 

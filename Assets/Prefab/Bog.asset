@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d4dea0182cc9d749f878050ce0cac3, type: 3}
   m_Name: Bog
   m_EditorClassIdentifier: Assembly-CSharp::Signs
-  signName: Bog
+  signName: Book
   sleep: 1
   signImage: {fileID: 8400000, guid: 1194380c5d49edc7dad39c224c600bd2, type: 2}
   damage: 0

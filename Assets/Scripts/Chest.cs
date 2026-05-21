@@ -8,7 +8,7 @@ public class Chest : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+         compendium = GameObject.FindGameObjectWithTag("CompendiumTag").GetComponent<Compendium>();
     }
 
     // Update is called once per frame
@@ -17,12 +17,12 @@ public class Chest : MonoBehaviour
         if (GetComponent<OnClick>().isclick == true)
         {
             GetComponent<OnClick>().isclick = false;
-            compendium.RefreshUI();
+            //compendium.RefreshUI();
             foreach (var item in giveSign)
             {
                 compendium.signs.Add(item);  
             }
-            
+            this.enabled = false;
             //Debug.Log("Collected " + giveSign.signName);
         }
     }
