@@ -1446,6 +1446,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4495941365039857882, guid: 32ad47ad7c0b40891aad92d1fca6d098, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495941365039857882, guid: 32ad47ad7c0b40891aad92d1fca6d098, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495941365039857882, guid: 32ad47ad7c0b40891aad92d1fca6d098, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 739006352}
+    - target: {fileID: 4495941365039857882, guid: 32ad47ad7c0b40891aad92d1fca6d098, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495941365039857882, guid: 32ad47ad7c0b40891aad92d1fca6d098, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495941365039857882, guid: 32ad47ad7c0b40891aad92d1fca6d098, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495941365039857882, guid: 32ad47ad7c0b40891aad92d1fca6d098, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495941365039857882, guid: 32ad47ad7c0b40891aad92d1fca6d098, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6653299316602098118, guid: 32ad47ad7c0b40891aad92d1fca6d098, type: 3}
       propertyPath: m_Name
       value: MainMenu
@@ -1668,8 +1700,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -253.18616, y: 492.99048}
-  m_SizeDelta: {x: 655.5806, y: 287.6425}
+  m_AnchoredPosition: {x: -318.9143, y: 286.41644}
+  m_SizeDelta: {x: 787.037, y: 700.7906}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879059711
 MonoBehaviour:
